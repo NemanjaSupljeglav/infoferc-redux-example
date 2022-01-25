@@ -1,4 +1,5 @@
 import api from "./API/api.json";
+import "./app.css";
 import PostCard from "./components/postCard/PostCard";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "./redux/rangSlice";
@@ -7,7 +8,7 @@ function App() {
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.rang.movies);
   return (
-    <div className="App">
+    <div className="app-wrapper">
       {/*{movies.map((movie) => (
         <li key={movie.id}>{movie.title}</li>
       ))}*/}
