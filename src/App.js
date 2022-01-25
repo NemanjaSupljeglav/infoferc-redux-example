@@ -8,21 +8,21 @@ function App() {
   const movies = useSelector((state) => state.rang.movies);
   return (
     <div className="App">
-      <PostCard
-        key={movies.id}
-        title={movies.title}
-        describe={movies.describe}
-        date={movies.date}
-        type={movies.type}
-        rang={movies.rang}
-        isActive={movies.isActive}
-        picture={movies.picture}
-      ></PostCard>
-
       {/*{movies.map((movie) => (
         <li key={movie.id}>{movie.title}</li>
       ))}*/}
-
+      {movies.map((movie) => (
+        <PostCard
+          key={movie.id}
+          title={movie.title}
+          describe={movie.describe}
+          date={movie.date}
+          type={movie.type}
+          rang={movie.rang}
+          isActive={movie.isActive}
+          picture={movie.picture}
+        ></PostCard>
+      ))}
       <div>
         <button
           aria-label="Increment value"

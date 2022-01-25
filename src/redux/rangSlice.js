@@ -6,6 +6,7 @@ export const counterSlice = createSlice({
   initialState: {
     value: 6,
     movies: api,
+    newRang: "",
   },
   reducers: {
     increment: (state) => {
@@ -20,6 +21,7 @@ export const counterSlice = createSlice({
     },
     incrementByAmount: (state, action) => {
       state.value = action.payload;
+      state.newRang = action.payload;
     },
   },
 });

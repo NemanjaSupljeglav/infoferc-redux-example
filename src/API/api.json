@@ -3,8 +3,8 @@
     "title": "Lindsay Snow",
     "describe": "Consectetur culpa elit consectetur occaecat in excepteur ut laboris ex pariatur minim. Velit pariatur laborum qui ullamco est sit Lorem commodo deserunt non mollit veniam. Ipsum officia incididunt nulla ut nostrud laboris esse reprehenderit dolor aliqua dolore. Ullamco et occaecat minim irure pariatur esse.\r\n",
     "date": "2021",
-    "type": "comedy",
-    "rang": 4,
+    "type": "Comedy",
+    "rang": 2,
     "isActive": false,
     "id": 1,
     "picture": "https://upload.wikimedia.org/wikipedia/sh/0/02/Spider-Man_2_Poster.jpg"
@@ -14,7 +14,7 @@
     "describe": "Deserunt sunt nisi exercitation occaecat voluptate reprehenderit aliqua enim excepteur laborum. Reprehenderit exercitation laboris esse labore pariatur nostrud. Ex laborum laboris ut non culpa eu tempor culpa eiusmod officia id irure sunt. Aliqua sunt est officia consectetur aute sit ipsum in laboris velit occaecat. Incididunt sint excepteur dolore nostrud est duis.\r\n",
     "date": "2001",
     "type": "Action",
-    "rang": 3,
+    "rang": 1,
     "isActive": true,
     "id": 2,
     "picture": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
@@ -24,6 +24,8 @@
     "describe": "Exercitation id sit quis laboris. Minim labore irure proident do in sint Lorem mollit ad occaecat. Veniam voluptate incididunt velit ullamco amet veniam. Officia occaecat incididunt mollit labore quis. Ex non excepteur non laborum id magna quis officia cupidatat reprehenderit et mollit. Non ex aliqua Lorem nulla dolor.\r\n",
     "date": "1995",
     "type": "Horor",
+    "rang": 1,
+
     "isActive": false,
     "id": 3,
     "picture": "https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
@@ -33,7 +35,7 @@
     "describe": "Tempor velit velit quis occaecat ea labore sit ad velit. Et amet tempor Lorem ad sunt pariatur reprehenderit sunt. Proident anim exercitation eu culpa.\r\n",
     "date": "2010",
     "type": "Action",
-    "rang": 5,
+    "rang": 2,
     "isActive": false,
     "id": 4,
     "picture": "https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"

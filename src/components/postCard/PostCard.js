@@ -1,69 +1,197 @@
 import "./postCard.css";
 import { AiFillStar } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
 import { incrementByAmount } from "../../redux/rangSlice";
 function PostCard(props) {
   const count = useSelector((state) => state.rang.value);
-
+  const newRang = useSelector((state) => state.newRang);
+  const [rangNum, setRangNum] = useState(props.rang);
   const dispatch = useDispatch();
   return (
     <>
       <div className="post-card-wrapper">
-        <p className="post-type">Horor</p>
+        <p className="post-type">{props.type}</p>
 
         <img
           className="post-cover-image"
-          src="https://upload.wikimedia.org/wikipedia/sh/0/02/The_Amazing_Spider-Man_theatrical_poster.jpeg"
+          src={props.picture}
           alt="Post Image"
         ></img>
-
-        <h2 className="post-card-title">Spider-Man (1994)</h2>
-
-        <p className="description-post">
-          Spider-Man ili Čovjek pauk je izmišljeni stripovski lik izdavačke kuće
-          Marvel Comics. Stvorili su ga pisac Stan Lee i pisac-crtač Steve
-          Ditko, a svoje prvo pojavljivanje je imao u kolovozu 1962. godine u
-          stripu Amazing Fantasy #15. Lee i Ditko su zamislili lik kao siroče
-          koje odgajaju njegovi ujna May i ujak Ben te da...
-        </p>
-        <div className="rang-status">
-          <h2 className="post-card-rang">
-            <AiFillStar onClick={() => dispatch(incrementByAmount(1))} />
-            <AiFillStar onClick={() => dispatch(incrementByAmount(2))} />
-            <AiFillStar onClick={() => dispatch(incrementByAmount(3))} />
-            <AiFillStar onClick={() => dispatch(incrementByAmount(4))} />
-            <AiFillStar onClick={() => dispatch(incrementByAmount(5))} />5
+        <div className="title-available">
+          <h2 className="post-card-title">
+            {props.title} ({props.date})
           </h2>
-          <h2 className="post-card-status">Available</h2>
+          {props.isActive && <h2 className="available-post">Available</h2>}
+          {!props.isActive && <h2 className="available-post">Not available</h2>}
         </div>
-      </div>
-      <div className="post-card-wrapper">
-        <p className="post-type">Horor</p>
-
-        <img
-          className="post-cover-image"
-          src="https://upload.wikimedia.org/wikipedia/sh/0/02/The_Amazing_Spider-Man_theatrical_poster.jpeg"
-          alt="Post Image"
-        ></img>
-
-        <h2 className="post-card-title">Spider-Man (1994)</h2>
-
-        <p className="description-post">
-          Spider-Man ili Čovjek pauk je izmišljeni stripovski lik izdavačke kuće
-          Marvel Comics. Stvorili su ga pisac Stan Lee i pisac-crtač Steve
-          Ditko, a svoje prvo pojavljivanje je imao u kolovozu 1962. godine u
-          stripu Amazing Fantasy #15. Lee i Ditko su zamislili lik kao siroče
-          koje odgajaju njegovi ujna May i ujak Ben te da...
-        </p>
+        <p className="description-post">{props.describe}</p>
         <div className="rang-status">
           <h2 className="post-card-rang">
-            <AiFillStar onClick={() => dispatch(incrementByAmount(1))} />
-            <AiFillStar onClick={() => dispatch(incrementByAmount(2))} />
-            <AiFillStar onClick={() => dispatch(incrementByAmount(3))} />
-            <AiFillStar onClick={() => dispatch(incrementByAmount(4))} />
-            <AiFillStar onClick={() => dispatch(incrementByAmount(5))} />5
+            {props.isActive && (
+              <>
+                {" "}
+                {rangNum >= 1 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(1)} color="red" />
+                  </div>
+                )}
+                {rangNum < 1 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(1)} />
+                  </div>
+                )}
+              </>
+            )}
+            {!props.isActive && (
+              <>
+                {" "}
+                {rangNum >= 1 && (
+                  <div>
+                    {" "}
+                    <AiFillStar color="red" />
+                  </div>
+                )}
+                {rangNum < 1 && (
+                  <div>
+                    {" "}
+                    <AiFillStar />
+                  </div>
+                )}
+              </>
+            )}
+            {props.isActive && (
+              <>
+                {rangNum >= 2 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(2)} color="red" />
+                  </div>
+                )}
+                {rangNum < 2 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(2)} />
+                  </div>
+                )}
+              </>
+            )}
+
+            {!props.isActive && (
+              <>
+                {rangNum >= 2 && (
+                  <div>
+                    {" "}
+                    <AiFillStar color="red" />
+                  </div>
+                )}
+                {rangNum < 2 && (
+                  <div>
+                    {" "}
+                    <AiFillStar />
+                  </div>
+                )}
+              </>
+            )}
+            {props.isActive && (
+              <>
+                {rangNum >= 3 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(3)} color="red" />
+                  </div>
+                )}
+                {rangNum < 3 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(3)} />
+                  </div>
+                )}
+              </>
+            )}
+            {!props.isActive && (
+              <>
+                {rangNum >= 3 && (
+                  <div>
+                    {" "}
+                    <AiFillStar color="red" />
+                  </div>
+                )}
+                {rangNum < 3 && (
+                  <div>
+                    {" "}
+                    <AiFillStar />
+                  </div>
+                )}
+              </>
+            )}
+            {props.isActive && (
+              <>
+                {rangNum >= 4 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(4)} color="red" />
+                  </div>
+                )}
+                {rangNum < 4 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(4)} />
+                  </div>
+                )}
+              </>
+            )}
+            {!props.isActive && (
+              <>
+                {rangNum >= 4 && (
+                  <div>
+                    {" "}
+                    <AiFillStar color="red" />
+                  </div>
+                )}
+                {rangNum < 4 && (
+                  <div>
+                    {" "}
+                    <AiFillStar />
+                  </div>
+                )}
+              </>
+            )}
+            {props.isActive && (
+              <>
+                {rangNum >= 5 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(5)} color="red" />
+                  </div>
+                )}
+                {rangNum < 5 && (
+                  <div>
+                    {" "}
+                    <AiFillStar onClick={() => setRangNum(5)} />
+                  </div>
+                )}
+              </>
+            )}
+            {!props.isActive && (
+              <>
+                {rangNum >= 5 && (
+                  <div>
+                    {" "}
+                    <AiFillStar color="red" />
+                  </div>
+                )}
+                {rangNum < 5 && (
+                  <div>
+                    {" "}
+                    <AiFillStar />
+                  </div>
+                )}
+              </>
+            )}
           </h2>
-          <h2 className="post-card-status">Available</h2>
         </div>
       </div>
     </>
