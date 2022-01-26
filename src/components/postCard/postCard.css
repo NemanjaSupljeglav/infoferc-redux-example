@@ -55,7 +55,8 @@
   padding-right: 10px;
 }
 .rang-status {
-  display: flex;
+  margin-left: 10px;
+  position: relative;
 }
 .post-card-status {
   width: max-content;

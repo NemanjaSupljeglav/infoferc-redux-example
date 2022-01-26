@@ -1,44 +1,8 @@
-import api from "./API/api.json";
-import "./app.css";
-import PostCard from "./components/postCard/PostCard";
-import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "./redux/rangSlice";
+import Dashboard from "../src/pages/Dashboard";
 function App() {
-  const count = useSelector((state) => state.rang.value);
-  const dispatch = useDispatch();
-  const movies = useSelector((state) => state.rang.movies);
   return (
     <div className="app-wrapper">
-      {/*{movies.map((movie) => (
-        <li key={movie.id}>{movie.title}</li>
-      ))}*/}
-      {movies.map((movie) => (
-        <PostCard
-          key={movie.id}
-          title={movie.title}
-          describe={movie.describe}
-          date={movie.date}
-          type={movie.type}
-          rang={movie.rang}
-          isActive={movie.isActive}
-          picture={movie.picture}
-        ></PostCard>
-      ))}
-      <div>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
-      </div>
+      <Dashboard></Dashboard>
     </div>
   );
 }

@@ -1,20 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import api from "../API/api.json";
 
-export const counterSlice = createSlice({
-  name: "counter",
+export const moviesSlice = createSlice({
+  name: "movies",
   initialState: {
-    value: 1,
-    movies: api,
-    newRang: "",
+    movies: [],
   },
   reducers: {
-    rang: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1;
+    getMovies: (state) => {
+      state.movies = api;
+      console.log("proslo");
     },
   },
 });
@@ -43,6 +38,6 @@ export const FetchMovie = () => {
 
 */
 // Action creators are generated for each case reducer function
-export const { rang } = counterSlice.actions;
+export const { getMovies } = moviesSlice.actions;
 
-export default counterSlice.reducer;
+export default moviesSlice.reducer;

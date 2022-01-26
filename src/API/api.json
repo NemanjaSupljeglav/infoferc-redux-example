@@ -23,7 +23,7 @@
     "title": "Leigh Ingram",
     "describe": "Exercitation id sit quis laboris. Minim labore irure proident do in sint Lorem mollit ad occaecat. Veniam voluptate incididunt velit ullamco amet veniam. Officia occaecat incididunt mollit labore quis. Ex non excepteur non laborum id magna quis officia cupidatat reprehenderit et mollit. Non ex aliqua Lorem nulla dolor.\r\n",
     "date": "1995",
-    "type": "Horor",
+    "type": "Horror",
     "rang": 1,
 
     "isActive": false,
@@ -64,7 +64,7 @@
     "title": "Kelly Beck",
     "describe": "Id tempor ex pariatur sunt cillum cupidatat consectetur. Cillum pariatur non exercitation deserunt pariatur anim laboris duis sint elit id cillum. Dolor cupidatat tempor nulla dolor nisi. Sunt adipisicing duis nulla reprehenderit voluptate dolor est. Consequat minim consectetur duis minim labore consectetur elit occaecat do cillum pariatur magna esse. Cupidatat voluptate veniam culpa duis deserunt sit.\r\n",
     "date": "2014",
-    "type": "Horor",
+    "type": "Horror",
     "rang": 5,
     "isActive": true,
     "id": 7,
@@ -74,7 +74,7 @@
     "title": "Jeanne Strong",
     "describe": "Est eu voluptate fugiat elit aute mollit commodo incididunt cupidatat incididunt exercitation fugiat cupidatat ea. Voluptate laborum ea aliqua id. Id incididunt incididunt labore commodo reprehenderit culpa laborum. Nisi aute nulla incididunt laborum adipisicing commodo nulla. Incididunt fugiat Lorem eu in nulla exercitation nisi occaecat exercitation nostrud laborum duis sit.\r\n",
     "date": "1998",
-    "type": "Horor",
+    "type": "Horror",
     "rang": 3,
     "id": 8,
     "picture": "https://images.unsplash.com/photo-1462926703708-44ab9e271d97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
@@ -86,7 +86,7 @@
     "type": "Comedy",
     "rang": 2,
     "isActive": false,
-    "id": 1,
+    "id": 9,
     "picture": "https://upload.wikimedia.org/wikipedia/sh/0/02/Spider-Man_2_Poster.jpg"
   },
   {
@@ -96,18 +96,18 @@
     "type": "Action",
     "rang": 1,
     "isActive": true,
-    "id": 2,
+    "id": 10,
     "picture": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
   },
   {
     "title": "Leigh Ingram",
     "describe": "Exercitation id sit quis laboris. Minim labore irure proident do in sint Lorem mollit ad occaecat. Veniam voluptate incididunt velit ullamco amet veniam. Officia occaecat incididunt mollit labore quis. Ex non excepteur non laborum id magna quis officia cupidatat reprehenderit et mollit. Non ex aliqua Lorem nulla dolor.\r\n",
     "date": "1995",
-    "type": "Horor",
+    "type": "Horror",
     "rang": 1,
 
     "isActive": false,
-    "id": 3,
+    "id": 11,
     "picture": "https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
   },
   {
@@ -117,7 +117,7 @@
     "type": "Action",
     "rang": 2,
     "isActive": false,
-    "id": 4,
+    "id": 12,
     "picture": "https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
   },
   {
@@ -127,7 +127,7 @@
     "type": "Comedy",
     "rang": 2,
     "isActive": false,
-    "id": 5,
+    "id": 13,
     "picture": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80"
   },
   {
@@ -137,26 +137,26 @@
     "type": "Action",
     "rang": 3,
     "isActive": true,
-    "id": 6,
+    "id": 14,
     "picture": "https://images.unsplash.com/photo-1494995971821-13e351803d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
   },
   {
     "title": "Kelly Beck",
     "describe": "Id tempor ex pariatur sunt cillum cupidatat consectetur. Cillum pariatur non exercitation deserunt pariatur anim laboris duis sint elit id cillum. Dolor cupidatat tempor nulla dolor nisi. Sunt adipisicing duis nulla reprehenderit voluptate dolor est. Consequat minim consectetur duis minim labore consectetur elit occaecat do cillum pariatur magna esse. Cupidatat voluptate veniam culpa duis deserunt sit.\r\n",
     "date": "2014",
-    "type": "Horor",
+    "type": "Horror",
     "rang": 5,
     "isActive": true,
-    "id": 7,
+    "id": 15,
     "picture": "https://images.unsplash.com/photo-1462926703708-44ab9e271d97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
   },
   {
     "title": "Jeanne Strong",
     "describe": "Est eu voluptate fugiat elit aute mollit commodo incididunt cupidatat incididunt exercitation fugiat cupidatat ea. Voluptate laborum ea aliqua id. Id incididunt incididunt labore commodo reprehenderit culpa laborum. Nisi aute nulla incididunt laborum adipisicing commodo nulla. Incididunt fugiat Lorem eu in nulla exercitation nisi occaecat exercitation nostrud laborum duis sit.\r\n",
     "date": "1998",
-    "type": "Horor",
+    "type": "Horror",
     "rang": 3,
-    "id": 8,
+    "id": 16,
     "picture": "https://images.unsplash.com/photo-1462926703708-44ab9e271d97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
   }
 ]
