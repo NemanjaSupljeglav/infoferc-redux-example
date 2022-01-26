@@ -71,7 +71,7 @@ function AddNewMovie() {
       isActive: enteredAvailable,
       id: 100,
       picture:
-        "https://thumbs.dreamstime.com/z/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg",
+        "https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg",
     };
     console.log("submit proso", dataMovie);
 
@@ -131,7 +131,7 @@ function AddNewMovie() {
               margin="dense"
               id="name"
               label="Year of presentation"
-              type="text"
+              type="number"
               fullWidth
               variant="standard"
               className="year-of-presentation"
