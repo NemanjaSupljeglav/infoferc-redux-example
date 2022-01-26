@@ -9,6 +9,9 @@ export const moviesSlice = createSlice({
   reducers: {
     getMovies: (state) => {
       state.movies = api;
+    },
+    addNewMovie: (state, { payload }) => {
+      state.movies = [payload].concat(api);
       console.log("proslo");
     },
   },
@@ -38,6 +41,6 @@ export const FetchMovie = () => {
 
 */
 // Action creators are generated for each case reducer function
-export const { getMovies } = moviesSlice.actions;
+export const { getMovies, addNewMovie } = moviesSlice.actions;
 
 export default moviesSlice.reducer;
