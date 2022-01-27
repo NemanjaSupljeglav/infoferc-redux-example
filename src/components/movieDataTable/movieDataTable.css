@@ -1,0 +1,10 @@
+.movie-data-table-wrapper {
+  margin: 10px;
+  box-shadow: 2px 2px 20px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 2px 20px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 20px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+.row-edit-table {
+  cursor: pointer;
+}

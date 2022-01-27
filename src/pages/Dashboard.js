@@ -2,9 +2,11 @@ import "./dashboard.css";
 import PostCard from "../components/postCard/PostCard";
 import { useSelector, useDispatch } from "react-redux";
 import { getMovies } from "../redux/moviesSlice";
-import { useEffect } from "react";
-import AddNewMovie from "../components/addNewMovie/addNewMovie";
+import { useEffect, useState } from "react";
+import DialogAddMovie from "../components/dialogAddMovie/dialogAddMovie";
+import MovieDataTable from "../components/movieDataTable/movieDataTable";
 function Dashboard() {
+  const [open, setOpen] = useState(false);
   const count = useSelector((state) => state.movies.value);
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
@@ -17,7 +19,7 @@ function Dashboard() {
   }, []);
   return (
     <div className="wrapper-all">
-      <AddNewMovie></AddNewMovie>
+      <DialogAddMovie setOpen={setOpen} open={open} />
       <div className="app-wrapper">
         {movies.map((movie) => (
           <PostCard
@@ -29,10 +31,11 @@ function Dashboard() {
             rang={movie.rang}
             isActive={movie.isActive}
             picture={movie.picture}
-          ></PostCard>
+          />
         ))}
         <div></div>
       </div>
+      <MovieDataTable movies={movies} />
     </div>
   );
 }
