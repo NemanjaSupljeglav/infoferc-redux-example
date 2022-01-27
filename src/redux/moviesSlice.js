@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import api from "../API/api.json";
-
+const b = api
 export const moviesSlice = createSlice({
   name: "movies",
   initialState: {
@@ -13,6 +13,12 @@ export const moviesSlice = createSlice({
     addNewMovie: (state, { payload }) => {
       state.movies = [payload].concat(api);
       console.log("proslo");
+    },
+    editMovie: (state) => {
+      console.log("api")
+      console.log(api[1])
+      console.log("api")
+      state.movies = api.slice(1)
     },
   },
 });
@@ -41,6 +47,6 @@ export const FetchMovie = () => {
 
 */
 // Action creators are generated for each case reducer function
-export const { getMovies, addNewMovie } = moviesSlice.actions;
+export const { getMovies, addNewMovie, editMovie } = moviesSlice.actions;
 
 export default moviesSlice.reducer;

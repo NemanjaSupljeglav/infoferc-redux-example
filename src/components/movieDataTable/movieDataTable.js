@@ -6,11 +6,14 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { editMovie } from "../../redux/moviesSlice";
+import { useDispatch } from "react-redux";
 import "./movieDataTable.css";
+
+
 function createData(movies, description, category, year, available, rang) {
   return { movies, description, category, year, available, rang };
 }
-
 function MovieDataTable(props) {
   const rows = [
     props.movies.map((movie) =>
@@ -24,7 +27,7 @@ function MovieDataTable(props) {
       )
     ),
   ];
-
+  const dispatch = useDispatch();
   return (
     <div className="movie-data-table-wrapper">
       {props.movies && (
@@ -68,6 +71,7 @@ function MovieDataTable(props) {
           </Table>
         </TableContainer>
       )}
+      <button onClick={() => { dispatch(editMovie()) }}>klinki ocde</button>
     </div>
   );
 }
