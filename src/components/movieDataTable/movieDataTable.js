@@ -14,18 +14,7 @@ import { faCheck, faTimes, faEdit } from "@fortawesome/free-solid-svg-icons";
 function createData(movies, description, category, year, available, rang, id) {
   return { movies, description, category, year, available, rang, id };
 }
-let a = {
-  title: "Nemanja Snow",
-  describe:
-    "Opis neki culpa elit consectetur occaecat in excepteur ut laboris ex pariatur minim. Velit pariatur laborum qui ullamco est sit Lorem commodo deserunt non mollit veniam. Ipsum officia incididunt nulla ut nostrud laboris esse reprehenderit dolor aliqua dolore. Ullamco et occaecat minim irure pariatur esse.\r\n",
-  date: "19994",
-  type: "Comedy",
-  rang: 2,
-  isActive: false,
-  id: 1,
-  picture:
-    "https://upload.wikimedia.org/wikipedia/sh/0/02/Spider-Man_2_Poster.jpg",
-};
+
 function MovieDataTable(props) {
   const rows = [
     props.movies.map((movie) =>

@@ -8,6 +8,8 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Rating from "@mui/material/Rating";
 import { addNewMovie } from "../../redux/moviesSlice";
+import { editMovie } from "../../redux/moviesSlice";
+
 import { useDispatch } from "react-redux";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
@@ -28,7 +30,7 @@ function AddNewMovie() {
   const [enteredAvailable, setEnteredAvailable] = React.useState("true");
   const [enteredRang, setEnteredRang] = React.useState(0);
   const dispatch = useDispatch();
-
+  const eidtMovie = useSelector((state) => state.movies.movieForEdit);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -70,8 +72,13 @@ function AddNewMovie() {
         "https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg",
     };
     console.log("submit proso", dataMovie);
+    {
+      !eidtMovie && dispatch(addNewMovie(dataMovie));
+    }
+    {
+      eidtMovie && dispatch(editMovie(dataMovie));
+    }
 
-    dispatch(addNewMovie(dataMovie));
     handleClose();
   };
   return (
