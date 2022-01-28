@@ -7,6 +7,7 @@ import DialogAddMovie from "../components/dialogAddMovie/dialogAddMovie";
 import MovieDataTable from "../components/movieDataTable/movieDataTable";
 function Dashboard() {
   const [open, setOpen] = useState(false);
+  const [addNewOrEdit, setAddNewOrEdit] = useState(true);
   const count = useSelector((state) => state.movies.value);
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
@@ -19,7 +20,11 @@ function Dashboard() {
   }, []);
   return (
     <div className="wrapper-all">
-      <DialogAddMovie setOpen={setOpen} open={open} />
+      <DialogAddMovie
+        setOpen={setOpen}
+        open={open}
+        addNewOrEdit={addNewOrEdit}
+      />
       <div className="app-wrapper">
         {movies.map((movie) => (
           <PostCard
@@ -35,7 +40,12 @@ function Dashboard() {
         ))}
         <div></div>
       </div>
-      <MovieDataTable movies={movies} />
+      <MovieDataTable
+        movies={movies}
+        setOpen={setOpen}
+        open={open}
+        setAddNewOrEdit={setAddNewOrEdit}
+      />
     </div>
   );
 }

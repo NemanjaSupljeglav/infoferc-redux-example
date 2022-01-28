@@ -8,3 +8,11 @@
 .row-edit-table {
   cursor: pointer;
 }
+.row-edit-table:hover {
+  transform: scale(1.5);
+  -moz-box-shadow: 1px 0px 26px 1px rgba(0, 0, 0, 0.75);
+  transition-duration: 0.4s;
+}
+.row-edit-table:hover {
+  transition-duration: 0.4s;
+}

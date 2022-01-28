@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import api from "../API/api.json";
-const b = api
+const b = api;
 export const moviesSlice = createSlice({
   name: "movies",
   initialState: {
     movies: [],
+    movieForEdit: [],
   },
   reducers: {
     getMovies: (state) => {
@@ -14,11 +15,20 @@ export const moviesSlice = createSlice({
       state.movies = [payload].concat(api);
       console.log("proslo");
     },
-    editMovie: (state) => {
-      console.log("api")
-      console.log(api[1])
-      console.log("api")
-      state.movies = api.slice(1)
+    editMovie: (state, { payload }) => {
+      console.log("api");
+      console.log("api");
+      let updateData = [payload].concat(api.slice(3));
+
+      console.log(api.slice(0, 2));
+
+      state.movies = [].concat(updateData);
+    },
+    getEditMovie: (state, { payload }) => {
+      state.movieForEdit = api.filter(function (movie) {
+        return movie.id == payload;
+      });
+      console.log(state.movieForEdit);
     },
   },
 });
@@ -47,6 +57,7 @@ export const FetchMovie = () => {
 
 */
 // Action creators are generated for each case reducer function
-export const { getMovies, addNewMovie, editMovie } = moviesSlice.actions;
+export const { getMovies, addNewMovie, editMovie, getEditMovie } =
+  moviesSlice.actions;
 
 export default moviesSlice.reducer;

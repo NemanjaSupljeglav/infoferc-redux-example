@@ -27,6 +27,7 @@ function DialogAddMovie(props) {
     React.useState("");
   const [enteredAvailable, setEnteredAvailable] = React.useState("true");
   const [enteredRang, setEnteredRang] = React.useState(0);
+
   const dispatch = useDispatch();
 
   const handleClickOpen = () => {
@@ -75,7 +76,10 @@ function DialogAddMovie(props) {
     };
     console.log("submit proso", dataMovie);
 
-    dispatch(addNewMovie(dataMovie));
+    {
+      props.addNewOrEdit && dispatch(addNewMovie(dataMovie));
+    }
+
     handleClose();
   };
   return (

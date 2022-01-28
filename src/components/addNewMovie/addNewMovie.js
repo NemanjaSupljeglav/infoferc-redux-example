@@ -85,7 +85,7 @@ function AddNewMovie() {
           Add new movie
         </Button>
         <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>Add movie</DialogTitle>
+          <DialogTitle>Add movieee</DialogTitle>
           <DialogContent>
             <DialogContentText>Add your favorite movie.</DialogContentText>
 
