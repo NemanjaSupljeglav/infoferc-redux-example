@@ -53,14 +53,10 @@ function AddNewMovie() {
     setEnteredAvailable(event.target.value);
   };
   const rangHandler = (event) => {
-    console.log("event.target");
-    console.log(event.target);
-
     setEnteredRang(event.target.value);
   };
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("submit proso");
     const dataMovie = {
       title: enteredName,
       describe: enteredDescription,
@@ -85,7 +81,7 @@ function AddNewMovie() {
           Add new movie
         </Button>
         <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>Add movieee</DialogTitle>
+          <DialogTitle>Add movie</DialogTitle>
           <DialogContent>
             <DialogContentText>Add your favorite movie.</DialogContentText>
 

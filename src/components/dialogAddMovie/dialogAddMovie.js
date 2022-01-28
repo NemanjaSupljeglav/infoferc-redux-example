@@ -18,7 +18,7 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import ButonAddMove from "../buttonAddMovie/butonAddMove";
 import "./dialogAddMovie.css";
-
+import { useSelector } from "react-redux";
 function DialogAddMovie(props) {
   const [enteredName, setEnteredlName] = React.useState("");
   const [enteredDescription, setEnteredDescription] = React.useState("");
@@ -27,9 +27,10 @@ function DialogAddMovie(props) {
     React.useState("");
   const [enteredAvailable, setEnteredAvailable] = React.useState("true");
   const [enteredRang, setEnteredRang] = React.useState(0);
-
+  const eidtMovie = useSelector((state) => state.movies.movieForEdit);
   const dispatch = useDispatch();
-
+  console.log("eidtMovieeeeee");
+  console.log("eidtMovieeeeeeee");
   const handleClickOpen = () => {
     props.setOpen(true);
   };
@@ -76,9 +77,7 @@ function DialogAddMovie(props) {
     };
     console.log("submit proso", dataMovie);
 
-    {
-      props.addNewOrEdit && dispatch(addNewMovie(dataMovie));
-    }
+    dispatch(addNewMovie(dataMovie));
 
     handleClose();
   };
@@ -95,7 +94,7 @@ function DialogAddMovie(props) {
               autoFocus
               margin="dense"
               id="name"
-              label="Movie name"
+              label={eidtMovie && eidtMovie[0]?.title}
               type="text"
               fullWidth
               variant="standard"
@@ -105,7 +104,7 @@ function DialogAddMovie(props) {
               autoFocus
               margin="dense"
               id="name"
-              label="Description"
+              label={eidtMovie && eidtMovie[0]?.describe}
               type="text"
               fullWidth
               variant="standard"
@@ -119,8 +118,9 @@ function DialogAddMovie(props) {
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   value={enteredCategory}
-                  label="Category"
+                  label={eidtMovie && eidtMovie[0]?.type}
                   onChange={categoryHandler}
+                  renderValue={eidtMovie && eidtMovie[0]?.type}
                 >
                   <MenuItem value={"Horror"}>Horror</MenuItem>
                   <MenuItem value={"Action"}>Action</MenuItem>
@@ -132,19 +132,17 @@ function DialogAddMovie(props) {
               autoFocus
               margin="dense"
               id="name"
-              label="Year of presentation"
+              label={eidtMovie && eidtMovie[0]?.date}
               type="number"
               fullWidth
               variant="standard"
               className="year-of-presentation"
               onChange={yearOfPresentationHandler}
-              required
             />
 
             <ToggleButtonGroup
               color="primary"
               value={enteredAvailable}
-              exclusive
               onChange={availableHandler}
             >
               <ToggleButton value="true">Available</ToggleButton>
@@ -153,7 +151,8 @@ function DialogAddMovie(props) {
             <div className="rating-add">
               <Rating
                 name="simple-controlled"
-                value={enteredRang}
+                value={eidtMovie && eidtMovie[0]?.rang}
+                label={eidtMovie && eidtMovie[0]?.rang}
                 onChange={rangHandler}
                 className="add-rang"
               />

@@ -8,7 +8,7 @@ import MovieDataTable from "../components/movieDataTable/movieDataTable";
 function Dashboard() {
   const [open, setOpen] = useState(false);
   const [addNewOrEdit, setAddNewOrEdit] = useState(true);
-  const count = useSelector((state) => state.movies.value);
+
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
 

@@ -16,8 +16,6 @@ export const moviesSlice = createSlice({
       console.log("proslo");
     },
     editMovie: (state, { payload }) => {
-      console.log("api");
-      console.log("api");
       let updateData = [payload].concat(api.slice(3));
 
       console.log(api.slice(0, 2));
