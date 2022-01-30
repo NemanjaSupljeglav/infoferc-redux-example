@@ -88,7 +88,7 @@ function MovieDataTable(props) {
       )}
       <button
         onClick={() => {
-          props.setAddNewOrEdit(false);
+          props.setAddNewOrEdit(true);
           props.setOpen(true);
           dispatch(getEditMovie(2));
         }}

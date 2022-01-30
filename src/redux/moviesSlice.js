@@ -13,12 +13,13 @@ export const moviesSlice = createSlice({
     },
     addNewMovie: (state, { payload }) => {
       state.movies = [payload].concat(api);
-      console.log("proslo");
+
     },
     editMovie: (state, { payload }) => {
-      let updateData = [payload].concat(api.slice(3));
+      let updateData = [payload].concat(api.slice(4));
 
-      console.log(api.slice(0, 2));
+
+
 
       state.movies = [].concat(updateData);
     },
@@ -26,7 +27,12 @@ export const moviesSlice = createSlice({
       state.movieForEdit = api.filter(function (movie) {
         return movie.id == payload;
       });
-      console.log(state.movieForEdit);
+
+    },
+    getEditMovieDelete: (state) => {
+      state.movieForEdit = []
+
+
     },
   },
 });
@@ -55,7 +61,7 @@ export const FetchMovie = () => {
 
 */
 // Action creators are generated for each case reducer function
-export const { getMovies, addNewMovie, editMovie, getEditMovie } =
+export const { getMovies, addNewMovie, editMovie, getEditMovie, getEditMovieDelete } =
   moviesSlice.actions;
 
 export default moviesSlice.reducer;

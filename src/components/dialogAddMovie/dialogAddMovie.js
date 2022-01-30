@@ -7,7 +7,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Rating from "@mui/material/Rating";
-import { addNewMovie } from "../../redux/moviesSlice";
+import { addNewMovie, editMovie } from "../../redux/moviesSlice";
 import { useDispatch } from "react-redux";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
@@ -17,21 +17,24 @@ import Select from "@mui/material/Select";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import ButonAddMove from "../buttonAddMovie/butonAddMove";
+import { getEditMovieDelete } from "../../redux/moviesSlice";
 import "./dialogAddMovie.css";
 import { useSelector } from "react-redux";
 function DialogAddMovie(props) {
+  const eidtMovie = useSelector((state) => state.movies.movieForEdit);
+
   const [enteredName, setEnteredlName] = React.useState("");
   const [enteredDescription, setEnteredDescription] = React.useState("");
   const [enteredCategory, setEnteredCategory] = React.useState("");
   const [enteredYearOfPresentation, setEnteredYearOfPresentation] =
     React.useState("");
   const [enteredAvailable, setEnteredAvailable] = React.useState("true");
-  const [enteredRang, setEnteredRang] = React.useState(0);
-  const eidtMovie = useSelector((state) => state.movies.movieForEdit);
+  const [enteredRang, setEnteredRang] = React.useState("");
+
+
   const dispatch = useDispatch();
-  console.log("eidtMovieeeeee");
-  console.log("eidtMovieeeeeeee");
   const handleClickOpen = () => {
+    dispatch(getEditMovieDelete());
     props.setOpen(true);
   };
 
@@ -55,14 +58,13 @@ function DialogAddMovie(props) {
     setEnteredAvailable(event.target.value);
   };
   const rangHandler = (event) => {
-    console.log("event.target");
-    console.log(event.target);
+
 
     setEnteredRang(event.target.value);
   };
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("submit proso");
+
     const dataMovie = {
       title: enteredName,
       describe: enteredDescription,
@@ -75,35 +77,41 @@ function DialogAddMovie(props) {
       picture:
         "https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg",
     };
-    console.log("submit proso", dataMovie);
 
-    dispatch(addNewMovie(dataMovie));
+
+
+    { !eidtMovie[0] && dispatch(addNewMovie(dataMovie)) }
+    { eidtMovie[0] && dispatch(editMovie(dataMovie)) }
 
     handleClose();
   };
+
   return (
     <form className="wrapper">
       <div>
         <ButonAddMove handleClickOpen={handleClickOpen} />
         <Dialog open={props.open} onClose={handleClose}>
-          <DialogTitle>Add movie</DialogTitle>
-          <DialogContent>
-            <DialogContentText>Add your favorite movie.</DialogContentText>
+          {eidtMovie[0] && <DialogTitle>Edit movie</DialogTitle>}
+          {!eidtMovie[0] && <DialogTitle>Add movie</DialogTitle>}
 
+          <DialogContent>
+
+            <label id="name" label="name">Name</label>
             <TextField
               autoFocus
               margin="dense"
               id="name"
-              label={eidtMovie && eidtMovie[0]?.title}
+              placeholder="Some Text"
               type="text"
               fullWidth
               variant="standard"
               onChange={nameHandler}
             />
+            <label id="decribe" label="decribe">Description</label>
             <TextField
               autoFocus
               margin="dense"
-              id="name"
+              id="decribe"
               label={eidtMovie && eidtMovie[0]?.describe}
               type="text"
               fullWidth
@@ -120,7 +128,7 @@ function DialogAddMovie(props) {
                   value={enteredCategory}
                   label={eidtMovie && eidtMovie[0]?.type}
                   onChange={categoryHandler}
-                  renderValue={eidtMovie && eidtMovie[0]?.type}
+
                 >
                   <MenuItem value={"Horror"}>Horror</MenuItem>
                   <MenuItem value={"Action"}>Action</MenuItem>
@@ -160,9 +168,9 @@ function DialogAddMovie(props) {
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose}>Cancel</Button>
-            <Button onClick={submitHandler} type="submit">
-              Add
-            </Button>
+
+            {eidtMovie[0] && <Button onClick={submitHandler}>Edit</Button>}
+            {!eidtMovie[0] && <Button v>Add movie</Button>}
           </DialogActions>
         </Dialog>
       </div>

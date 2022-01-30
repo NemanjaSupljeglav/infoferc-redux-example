@@ -31,6 +31,7 @@ function AddNewMovie() {
   const [enteredRang, setEnteredRang] = React.useState(0);
   const dispatch = useDispatch();
   const eidtMovie = useSelector((state) => state.movies.movieForEdit);
+  const movie = useSelector((state) => state.movies.movies);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -67,11 +68,11 @@ function AddNewMovie() {
       rang: enteredRang,
 
       isActive: enteredAvailable,
-      id: 100,
+      id: movie.length() + 1,
       picture:
         "https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg",
     };
-    console.log("submit proso", dataMovie);
+
     {
       !eidtMovie && dispatch(addNewMovie(dataMovie));
     }
@@ -85,18 +86,18 @@ function AddNewMovie() {
     <form className="wrapper">
       <div>
         <Button variant="outlined" onClick={handleClickOpen}>
-          Add new movie
+          Add new movieeeee
         </Button>
         <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>Add movie</DialogTitle>
+          <DialogTitle>Add movieeee</DialogTitle>
           <DialogContent>
-            <DialogContentText>Add your favorite movie.</DialogContentText>
-
+            <DialogContentText>Add your favorite movieeee.</DialogContentText>
+            <p label="name">Movie nameeeeeeeee</p>
             <TextField
               autoFocus
               margin="dense"
               id="name"
-              label="Movie name"
+
               type="text"
               fullWidth
               variant="standard"

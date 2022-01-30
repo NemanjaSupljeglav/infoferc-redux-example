@@ -7,7 +7,7 @@ import DialogAddMovie from "../components/dialogAddMovie/dialogAddMovie";
 import MovieDataTable from "../components/movieDataTable/movieDataTable";
 function Dashboard() {
   const [open, setOpen] = useState(false);
-  const [addNewOrEdit, setAddNewOrEdit] = useState(true);
+  const [addNewOrEdit, setAddNewOrEdit] = useState(false);
 
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
@@ -24,8 +24,10 @@ function Dashboard() {
         setOpen={setOpen}
         open={open}
         addNewOrEdit={addNewOrEdit}
+        setAddNewOrEdit={setAddNewOrEdit}
       />
       <div className="app-wrapper">
+        {/* 
         {movies.map((movie) => (
           <PostCard
             key={movie.id}
@@ -37,9 +39,10 @@ function Dashboard() {
             isActive={movie.isActive}
             picture={movie.picture}
           />
-        ))}
+        ))}*/}
         <div></div>
       </div>
+
       <MovieDataTable
         movies={movies}
         setOpen={setOpen}
