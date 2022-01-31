@@ -11,24 +11,23 @@ import { useDispatch } from "react-redux";
 import "./movieDataTable.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTimes, faEdit } from "@fortawesome/free-solid-svg-icons";
+
 function createData(movies, description, category, year, available, rang, id) {
   return { movies, description, category, year, available, rang, id };
 }
 
 function MovieDataTable(props) {
-  const rows = [
-    props.movies.map((movie) =>
-      createData(
-        movie.title,
-        movie.describe.substring(0, 100) + " ...",
-        movie.type,
-        movie.date,
-        movie.isActive,
-        movie.rang,
-        movie.id
-      )
-    ),
-  ];
+  const rows = props.movies.map((movie) =>
+    createData(
+      movie.title,
+      movie.describe.substring(0, 100) + " ...",
+      movie.type,
+      movie.date,
+      movie.isActive,
+      movie.rang,
+      movie.id
+    )
+  );
   const dispatch = useDispatch();
   return (
     <div className="movie-data-table-wrapper">
@@ -48,7 +47,7 @@ function MovieDataTable(props) {
             </TableHead>
 
             <TableBody>
-              {rows[0].map((row) => (
+              {rows.map((row) => (
                 <TableRow
                   key={row.movies}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
