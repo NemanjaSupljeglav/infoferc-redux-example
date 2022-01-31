@@ -31,7 +31,6 @@ function DialogAddMovie(props) {
   const [enteredAvailable, setEnteredAvailable] = React.useState("true");
   const [enteredRang, setEnteredRang] = React.useState("");
 
-
   const dispatch = useDispatch();
   const handleClickOpen = () => {
     dispatch(getEditMovieDelete());
@@ -58,8 +57,6 @@ function DialogAddMovie(props) {
     setEnteredAvailable(event.target.value);
   };
   const rangHandler = (event) => {
-
-
     setEnteredRang(event.target.value);
   };
   const submitHandler = (event) => {
@@ -78,10 +75,12 @@ function DialogAddMovie(props) {
         "https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg",
     };
 
-
-
-    { !eidtMovie[0] && dispatch(addNewMovie(dataMovie)) }
-    { eidtMovie[0] && dispatch(editMovie(dataMovie)) }
+    {
+      !eidtMovie[0] && dispatch(addNewMovie(dataMovie));
+    }
+    {
+      eidtMovie[0] && dispatch(editMovie(dataMovie));
+    }
 
     handleClose();
   };
@@ -95,22 +94,22 @@ function DialogAddMovie(props) {
           {!eidtMovie[0] && <DialogTitle>Add movie</DialogTitle>}
 
           <DialogContent>
-
-            <label id="name" label="name">Name</label>
             <TextField
               autoFocus
               margin="dense"
               id="name"
-              placeholder="Some Text"
+              placeholder="Movie title"
+              label={eidtMovie && eidtMovie[0]?.title}
               type="text"
               fullWidth
               variant="standard"
               onChange={nameHandler}
             />
-            <label id="decribe" label="decribe">Description</label>
+
             <TextField
               autoFocus
               margin="dense"
+              placeholder="Movie describe"
               id="decribe"
               label={eidtMovie && eidtMovie[0]?.describe}
               type="text"
@@ -128,7 +127,6 @@ function DialogAddMovie(props) {
                   value={enteredCategory}
                   label={eidtMovie && eidtMovie[0]?.type}
                   onChange={categoryHandler}
-
                 >
                   <MenuItem value={"Horror"}>Horror</MenuItem>
                   <MenuItem value={"Action"}>Action</MenuItem>
