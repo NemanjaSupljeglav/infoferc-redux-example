@@ -86,15 +86,6 @@ function MovieDataTable(props) {
           </Table>
         </TableContainer>
       )}
-      <button
-        onClick={() => {
-          props.setAddNewOrEdit(true);
-          props.setOpen(true);
-          dispatch(getEditMovie(2));
-        }}
-      >
-        klikni ovde
-      </button>
     </div>
   );
 }
