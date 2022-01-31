@@ -28,7 +28,7 @@ function DialogAddMovie(props) {
   const [enteredCategory, setEnteredCategory] = React.useState("");
   const [enteredYearOfPresentation, setEnteredYearOfPresentation] =
     React.useState("");
-  const [enteredAvailable, setEnteredAvailable] = React.useState("true");
+  const [enteredAvailable, setEnteredAvailable] = React.useState(true);
   const [enteredRang, setEnteredRang] = React.useState("");
 
   const dispatch = useDispatch();
@@ -74,7 +74,7 @@ function DialogAddMovie(props) {
       picture:
         "https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg",
     };
-
+    console.log("doslo");
     {
       !eidtMovie[0] && dispatch(addNewMovie(dataMovie));
     }
@@ -151,8 +151,8 @@ function DialogAddMovie(props) {
               value={enteredAvailable}
               onChange={availableHandler}
             >
-              <ToggleButton value="true">Available</ToggleButton>
-              <ToggleButton value="false">Not Available</ToggleButton>
+              <ToggleButton value={true}>Available</ToggleButton>
+              <ToggleButton value={false}>Not Available</ToggleButton>
             </ToggleButtonGroup>
             <div className="rating-add">
               <Rating
@@ -168,7 +168,9 @@ function DialogAddMovie(props) {
             <Button onClick={handleClose}>Cancel</Button>
 
             {eidtMovie[0] && <Button onClick={submitHandler}>Edit</Button>}
-            {!eidtMovie[0] && <Button v>Add movie</Button>}
+            {!eidtMovie[0] && (
+              <Button onClick={submitHandler}>Add movie</Button>
+            )}
           </DialogActions>
         </Dialog>
       </div>
