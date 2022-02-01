@@ -23,18 +23,23 @@ import Select from "@mui/material/Select";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 function Dashboard() {
+  const eidtMovie = useSelector((state) => state.movies.movieForEdit);
   const [open, setOpen] = useState(false);
   const [addNewOrEdit, setAddNewOrEdit] = useState("");
   const [enteredName, setEnteredlName] = useState("");
   const [enteredDescription, setEnteredDescription] = useState("");
-  const [enteredCategory, setEnteredCategory] = useState("");
+  const [enteredCategory, setEnteredCategory] = useState(
+    eidtMovie ? eidtMovie?.type : ""
+  );
   const [enteredYearOfPresentation, setEnteredYearOfPresentation] =
     useState("");
   const [enteredAvailable, setEnteredAvailable] = useState(true);
-  const [enteredRang, setEnteredRang] = useState("");
+  const [enteredRang, setEnteredRang] = useState(
+    eidtMovie ? eidtMovie?.rang : 5
+  );
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
-  const eidtMovie = useSelector((state) => state.movies.movieForEdit);
+
   const getPost = () => {
     dispatch(getMovies());
   };
@@ -117,7 +122,7 @@ function Dashboard() {
               className="row-edit-table"
               icon={faEdit}
               onClick={() => {
-                console.log("Klikno", dataIndex);
+                console.log("Klik", dataIndex);
                 setAddNewOrEdit("Edit movie");
                 dispatch(getEditMovie(dataIndex));
                 setOpen(true);
@@ -178,7 +183,7 @@ function Dashboard() {
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={enteredCategory}
-              label={eidtMovie && eidtMovie.typee}
+              label={enteredCategory}
               onChange={(event) => {
                 setEnteredCategory(event.target.value);
               }}
@@ -207,18 +212,26 @@ function Dashboard() {
           color="primary"
           value={enteredAvailable}
           onChange={(event) => {
+            console.log("event.target.value");
+            console.log(event.target.value);
             setEnteredAvailable(event.target.value);
           }}
         >
-          <ToggleButton value={true}>Available</ToggleButton>
-          <ToggleButton value={false}>Not Available</ToggleButton>
+          <ToggleButton
+            value={enteredAvailable}
+            onClick={console.log("klikliklik")}
+          >
+            Available
+          </ToggleButton>
+          <ToggleButton value={!enteredAvailable}>Not Available</ToggleButton>
         </ToggleButtonGroup>
         <div className="rating-add">
           <Rating
             name="simple-controlled"
-            value={eidtMovie && eidtMovie?.rang}
-            label={eidtMovie && eidtMovie?.rang}
+            value={enteredRang}
+            label={enteredRang}
             onChange={(event) => {
+              console.log(event.target.value);
               setEnteredRang(event.target.value);
             }}
             className="add-rang"
@@ -229,15 +242,17 @@ function Dashboard() {
   );
   return (
     <div>
-      <Button
-        onClick={() => {
-          setAddNewOrEdit("Add movie");
-          dispatch(getEditMovieDelete());
-          setOpen(true);
-          setAddNewOrEdit("Add new movie");
-        }}
-        label={"Add new"}
-      />
+      <div className="open-dialog">
+        <Button
+          onClick={() => {
+            setAddNewOrEdit("Add movie");
+            dispatch(getEditMovieDelete());
+            setOpen(true);
+          }}
+          label={"Add new"}
+        />
+      </div>
+
       <div className="wrapper-all">
         <Dialog
           setOpen={setOpen}

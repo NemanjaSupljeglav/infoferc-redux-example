@@ -25,3 +25,8 @@
 .row-edit-table:hover {
   transition-duration: 0.4s;
 }
+.open-dialog {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: -23px;
+}

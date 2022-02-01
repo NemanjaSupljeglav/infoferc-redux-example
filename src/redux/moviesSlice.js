@@ -13,7 +13,6 @@ export const moviesSlice = createSlice({
     },
     addNewMovie: (state, { payload }) => {
       state.movies = [payload].concat(api);
-      console.log("dolsoggg");
     },
     editMovie: (state, { payload }) => {
       let updateData = [payload].concat(api.slice(4));
@@ -21,10 +20,7 @@ export const moviesSlice = createSlice({
       state.movies = [].concat(updateData);
     },
     getEditMovie: (state, { payload }) => {
-      console.log("dolso0000");
-      console.log("dolso");
       state.movieForEdit = state.movies[payload];
-      console.log(state.movieForEdit);
     },
     getEditMovieDelete: (state) => {
       state.movieForEdit = null;
