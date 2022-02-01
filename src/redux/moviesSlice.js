@@ -23,9 +23,7 @@ export const moviesSlice = createSlice({
     getEditMovie: (state, { payload }) => {
       console.log("dolso0000");
       console.log("dolso");
-      state.movieForEdit = api.filter(function (movie) {
-        return movie.id == payload;
-      })[0];
+      state.movieForEdit = state.movies[payload];
       console.log(state.movieForEdit);
     },
     getEditMovieDelete: (state) => {

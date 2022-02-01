@@ -24,7 +24,7 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 function Dashboard() {
   const [open, setOpen] = useState(false);
-  const [addNewOrEdit, setAddNewOrEdit] = useState(false);
+  const [addNewOrEdit, setAddNewOrEdit] = useState("");
   const [enteredName, setEnteredlName] = useState("");
   const [enteredDescription, setEnteredDescription] = useState("");
   const [enteredCategory, setEnteredCategory] = useState("");
@@ -51,9 +51,6 @@ function Dashboard() {
       options: {
         filter: true,
         sort: true,
-      },
-      customBodyRenderLite: (dataIndex, rowIndex) => {
-        return <button onClick={() => console.log("kliknuoo")}>Edit</button>;
       },
     },
     {
@@ -94,6 +91,17 @@ function Dashboard() {
       options: {
         filter: true,
         sort: false,
+        customBodyRenderLite: (dataIndex) => {
+          return (
+            <>
+              {movies[dataIndex].isActive ? (
+                <FontAwesomeIcon icon={faCheck} color="green" />
+              ) : (
+                <FontAwesomeIcon icon={faTimes} color="red" />
+              )}
+            </>
+          );
+        },
       },
     },
 
@@ -110,6 +118,9 @@ function Dashboard() {
               icon={faEdit}
               onClick={() => {
                 console.log("Klikno", dataIndex);
+                setAddNewOrEdit("Edit movie");
+                dispatch(getEditMovie(dataIndex));
+                setOpen(true);
               }}
             />
           );
@@ -117,35 +128,7 @@ function Dashboard() {
       },
     },
   ];
-  const data = movies;
-  /*
-  const data = movies.map((movie) => [
-    movie.title,
-    movie.describe.substring(0, 100) + " ...",
-    movie.type,
-    movie.date,
 
-    [
-      movie.isActive ? (
-        <FontAwesomeIcon icon={faCheck} color="green" />
-      ) : (
-        <FontAwesomeIcon icon={faTimes} color="red" />
-      ),
-    ],
-    movie.rang,
-    <FontAwesomeIcon
-      icon={faEdit}
-      className="row-edit-table"
-      onClick={() => {
-        console.log(movie.id);
-        setAddNewOrEdit(false);
-        setOpen(true);
-        dispatch(getEditMovie(movie.id));
-      }}
-    />,
-  ]);
-  */
-  //DilogContent
   const dataMovie = {
     title: enteredName,
     describe: enteredDescription,
@@ -248,9 +231,10 @@ function Dashboard() {
     <div>
       <Button
         onClick={() => {
+          setAddNewOrEdit("Add movie");
           dispatch(getEditMovieDelete());
           setOpen(true);
-          setAddNewOrEdit(true);
+          setAddNewOrEdit("Add new movie");
         }}
         label={"Add new"}
       />
@@ -262,6 +246,7 @@ function Dashboard() {
           setAddNewOrEdit={setAddNewOrEdit}
           content={dialogContent}
           dataMovie={dataMovie}
+          title={addNewOrEdit}
         />
         <div className="app-wrapper">
           <div></div>
@@ -269,7 +254,7 @@ function Dashboard() {
         <ThemeProvider theme={createTheme()}>
           <MUIDataTable
             title={"30 Most Popular Movies"}
-            data={data}
+            data={movies}
             columns={columns}
             className="movie-data-table-wrapper"
           />
@@ -278,7 +263,5 @@ function Dashboard() {
     </div>
   );
 }
-
-//dialog content
 
 export default Dashboard;
