@@ -22,11 +22,15 @@ function PostCard(props) {
           <h2 className="post-card-title">
             {props.title} ({props.date})
           </h2>
-          {props.isActive && <h2 className="available-post">Available</h2>}
-          {!props.isActive && <h2 className="available-post">Not available</h2>}
+
+          {props.isActive ? (
+            <h2 className="available-post">Available</h2>
+          ) : (
+            <h2 className="available-post">Not available</h2>
+          )}
         </div>
         <div className="rang-status">
-          {props.isActive && (
+          {props.isActive ? (
             <Rating
               name="simple-controlled"
               value={rangNum}
@@ -34,8 +38,7 @@ function PostCard(props) {
                 setRangNum(newValue);
               }}
             />
-          )}
-          {!props.isActive && (
+          ) : (
             <Rating name="simple-controlled" value={rangNum} readOnly />
           )}
         </div>
