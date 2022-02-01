@@ -43,14 +43,79 @@ function Dashboard() {
   }, []);
 
   //MUIDataTable
+
   const columns = [
-    { name: "Name", options: { filterOptions: { fullWidth: true } } },
-    "Description",
-    "Category",
-    "Year of presentation",
-    "Available",
-    "Rang",
-    "Edit",
+    {
+      name: "title",
+      label: "Name",
+      options: {
+        filter: true,
+        sort: true,
+      },
+      customBodyRenderLite: (dataIndex, rowIndex) => {
+        return <button onClick={() => console.log("kliknuoo")}>Edit</button>;
+      },
+    },
+    {
+      name: "describe",
+      label: "Company",
+      options: {
+        filter: true,
+        sort: false,
+      },
+    },
+    {
+      name: "date",
+      label: "City",
+      options: {
+        filter: true,
+        sort: false,
+      },
+    },
+    {
+      name: "type",
+      label: "Category",
+      options: {
+        filter: true,
+        sort: false,
+      },
+    },
+    {
+      name: "rang",
+      label: "Rang",
+      options: {
+        filter: true,
+        sort: false,
+      },
+    },
+    {
+      name: "isActive",
+      label: "Active",
+      options: {
+        filter: true,
+        sort: false,
+      },
+    },
+
+    {
+      name: "",
+      options: {
+        filter: false,
+        sort: false,
+        empty: true,
+        customBodyRenderLite: (dataIndex) => {
+          return (
+            <FontAwesomeIcon
+              className="row-edit-table"
+              icon={faEdit}
+              onClick={() => {
+                console.log("Klikno", dataIndex);
+              }}
+            />
+          );
+        },
+      },
+    },
   ];
   const data = movies;
   /*
