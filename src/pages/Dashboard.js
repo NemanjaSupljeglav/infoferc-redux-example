@@ -122,7 +122,6 @@ function Dashboard() {
               className="row-edit-table"
               icon={faEdit}
               onClick={() => {
-                console.log("Klik", dataIndex);
                 setAddNewOrEdit("Edit movie");
                 dispatch(getEditMovie(dataIndex));
                 setOpen(true);
@@ -212,17 +211,10 @@ function Dashboard() {
           color="primary"
           value={enteredAvailable}
           onChange={(event) => {
-            console.log("event.target.value");
-            console.log(event.target.value);
             setEnteredAvailable(event.target.value);
           }}
         >
-          <ToggleButton
-            value={enteredAvailable}
-            onClick={console.log("klikliklik")}
-          >
-            Available
-          </ToggleButton>
+          <ToggleButton value={enteredAvailable}>Available</ToggleButton>
           <ToggleButton value={!enteredAvailable}>Not Available</ToggleButton>
         </ToggleButtonGroup>
         <div className="rating-add">
@@ -231,7 +223,6 @@ function Dashboard() {
             value={enteredRang}
             label={enteredRang}
             onChange={(event) => {
-              console.log(event.target.value);
               setEnteredRang(event.target.value);
             }}
             className="add-rang"
