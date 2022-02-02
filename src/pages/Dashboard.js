@@ -1,8 +1,8 @@
 import "./dashboard.css";
 import { useSelector, useDispatch } from "react-redux";
-import { getMovies } from "../redux/moviesSlice";
+import { editMovie, getMovies } from "../redux/moviesSlice";
 import { useEffect, useState } from "react";
-import Dialog from "../components/Dialog/Dialog";
+import Dialog from "../components/dialogs/Dialog";
 //MUIDataTable
 import MUIDataTable from "mui-datatables";
 import { ThemeProvider } from "@mui/styles";
@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getEditMovie } from "../redux/moviesSlice";
 import { getEditMovieDelete } from "../redux/moviesSlice";
 //Dialog
-import Button from "../components/button/Button";
+import Button from "../components/buttons/Button";
 import Rating from "@mui/material/Rating";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
@@ -22,6 +22,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import { addNewMovie } from "../redux/moviesSlice";
+
 function Dashboard() {
   const eidtMovie = useSelector((state) => state.movies.movieForEdit);
   const [open, setOpen] = useState(false);
@@ -33,9 +35,11 @@ function Dashboard() {
   );
   const [enteredYearOfPresentation, setEnteredYearOfPresentation] =
     useState("");
-  const [enteredAvailable, setEnteredAvailable] = useState(true);
+  const [enteredAvailable, setEnteredAvailable] = useState(
+    eidtMovie ? eidtMovie.isActive : true
+  );
   const [enteredRang, setEnteredRang] = useState(
-    eidtMovie ? eidtMovie?.rang : 5
+    eidtMovie ? eidtMovie.rang : 2
   );
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
@@ -60,18 +64,18 @@ function Dashboard() {
     },
     {
       name: "describe",
-      label: "Company",
+      label: "Describe",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
       name: "date",
-      label: "City",
+      label: "Year of presentation",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
@@ -79,15 +83,16 @@ function Dashboard() {
       label: "Category",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
+
     {
       name: "rang",
       label: "Rang",
       options: {
         filter: true,
-        sort: false,
+        sort: true,
       },
     },
     {
@@ -111,39 +116,58 @@ function Dashboard() {
     },
 
     {
-      name: "",
+      name: "Actions",
+      label: "",
+      property: "id",
       options: {
         filter: false,
         sort: false,
         empty: true,
         customBodyRenderLite: (dataIndex) => {
           return (
-            <FontAwesomeIcon
-              className="row-edit-table"
-              icon={faEdit}
-              onClick={() => {
-                setAddNewOrEdit("Edit movie");
-                dispatch(getEditMovie(dataIndex));
-                setOpen(true);
-              }}
-            />
+            <>
+              {movies[dataIndex]?.isActive ? (
+                <FontAwesomeIcon
+                  className="row-edit-table"
+                  icon={faEdit}
+                  onClick={() => {
+                    setAddNewOrEdit("Edit movie");
+                    dispatch(getEditMovie(movies[dataIndex]?.id));
+                    setOpen(true);
+                  }}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faEdit}
+                  onClick={() => {
+                    console.log("This movie is not available");
+                  }}
+                />
+              )}
+            </>
           );
         },
       },
     },
   ];
+  function handleAddNewMovie() {
+    const dataMovie = {
+      title: enteredName,
+      describe: enteredDescription,
+      date: enteredYearOfPresentation,
+      type: enteredCategory,
+      rang: enteredRang,
+      isActive: enteredAvailable,
+      id: 100,
+      picture:
+        "https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg",
+    };
+    eidtMovie
+      ? dispatch(editMovie(dataMovie))
+      : dispatch(addNewMovie(dataMovie));
+    setOpen(false);
+  }
 
-  const dataMovie = {
-    title: enteredName,
-    describe: enteredDescription,
-    date: enteredYearOfPresentation,
-    type: enteredCategory,
-    rang: enteredRang,
-    isActive: enteredAvailable,
-    id: 100,
-    picture:
-      "https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg",
-  };
   const dialogContent = (
     <div>
       <div className="dialog-content-wrapper">
@@ -151,11 +175,12 @@ function Dashboard() {
           autoFocus
           margin="dense"
           id="name"
+          name={eidtMovie && eidtMovie.title}
           placeholder="Movie title"
-          label={eidtMovie && eidtMovie.title}
           type="text"
           fullWidth
           variant="standard"
+          defaultValue={eidtMovie && eidtMovie.title}
           onChange={(event) => {
             setEnteredlName(event.target.value);
           }}
@@ -166,7 +191,7 @@ function Dashboard() {
           margin="dense"
           placeholder="Movie describe"
           id="decribe"
-          label={eidtMovie && eidtMovie.describe}
+          defaultValue={eidtMovie && eidtMovie.describe}
           type="text"
           fullWidth
           variant="standard"
@@ -177,12 +202,14 @@ function Dashboard() {
 
         <Box sx={{ minWidth: 120 }}>
           <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Category</InputLabel>
+            <InputLabel id="demo-simple-select-label">
+              {eidtMovie ? "" : "Category"}
+            </InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={enteredCategory}
-              label={enteredCategory}
+              name={enteredCategory}
+              defaultValue={eidtMovie ? eidtMovie.type : ""}
               onChange={(event) => {
                 setEnteredCategory(event.target.value);
               }}
@@ -200,6 +227,7 @@ function Dashboard() {
           label={eidtMovie && eidtMovie?.date}
           type="number"
           fullWidth
+          defaultValue={eidtMovie && eidtMovie.date}
           variant="standard"
           className="year-of-presentation"
           onChange={(event) => {
@@ -210,17 +238,32 @@ function Dashboard() {
         <ToggleButtonGroup
           color="primary"
           value={enteredAvailable}
-          onChange={(event) => {
-            setEnteredAvailable(event.target.value);
-          }}
+          defaultValue={eidtMovie ? eidtMovie.isActive : true}
+          onChange={setEnteredAvailable}
         >
-          <ToggleButton value={enteredAvailable}>Available</ToggleButton>
-          <ToggleButton value={!enteredAvailable}>Not Available</ToggleButton>
+          <ToggleButton
+            value={true}
+            onClick={() => {
+              setEnteredAvailable(true);
+              console.log(enteredAvailable);
+            }}
+          >
+            Available
+          </ToggleButton>
+          <ToggleButton
+            value={false}
+            onClick={() => {
+              setEnteredAvailable(false);
+              console.log(enteredAvailable);
+            }}
+          >
+            Not Available
+          </ToggleButton>
         </ToggleButtonGroup>
         <div className="rating-add">
           <Rating
             name="simple-controlled"
-            value={enteredRang}
+            defaultValue={eidtMovie ? eidtMovie.rang : 3}
             label={enteredRang}
             onChange={(event) => {
               setEnteredRang(event.target.value);
@@ -231,8 +274,13 @@ function Dashboard() {
       </div>
     </div>
   );
+  const options = {
+    print: false,
+    viewColumns: false,
+    selectableRows: false,
+  };
   return (
-    <div>
+    <>
       <div className="open-dialog">
         <Button
           onClick={() => {
@@ -251,8 +299,8 @@ function Dashboard() {
           addNewOrEdit={addNewOrEdit}
           setAddNewOrEdit={setAddNewOrEdit}
           content={dialogContent}
-          dataMovie={dataMovie}
           title={addNewOrEdit}
+          handleAddNewMovie={handleAddNewMovie}
         />
         <div className="app-wrapper">
           <div></div>
@@ -263,10 +311,11 @@ function Dashboard() {
             data={movies}
             columns={columns}
             className="movie-data-table-wrapper"
+            options={options}
           />
         </ThemeProvider>
       </div>
-    </div>
+    </>
   );
 }
 

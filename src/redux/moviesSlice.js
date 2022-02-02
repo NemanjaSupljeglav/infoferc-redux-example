@@ -20,7 +20,9 @@ export const moviesSlice = createSlice({
       state.movies = [].concat(updateData);
     },
     getEditMovie: (state, { payload }) => {
-      state.movieForEdit = state.movies[payload];
+      state.movieForEdit = api.filter(function (movie) {
+        return movie.id == payload;
+      })[0];
     },
     getEditMovieDelete: (state) => {
       state.movieForEdit = null;
