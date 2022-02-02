@@ -3,30 +3,17 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
-import { addNewMovie, editMovie } from "../../redux/moviesSlice";
-import { useDispatch } from "react-redux";
+
 import Button from "../buttons/Button";
 import "./dialog.css";
-import { useSelector } from "react-redux";
-function DialogAddMovie({
-  setOpen,
-  dataMovie,
-  open,
-  content,
-  title,
-  handleAddNewMovie,
-}) {
-  const eidtMovie = useSelector((state) => state.movies.movieForEdit);
 
-  const dispatch = useDispatch();
-
+function DialogAddMovie({ setOpen, open, content, title, handleAddNewMovie }) {
   const handleClose = () => {
     setOpen(false);
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-
     handleAddNewMovie();
   };
 

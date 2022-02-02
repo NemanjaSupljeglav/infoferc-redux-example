@@ -23,7 +23,11 @@ import Select from "@mui/material/Select";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { addNewMovie } from "../redux/moviesSlice";
+//Notification
+import { ReactNotifications } from "react-notifications-component";
+import { Store } from "react-notifications-component";
 
+import "react-notifications-component/dist/theme.css";
 function Dashboard() {
   const eidtMovie = useSelector((state) => state.movies.movieForEdit);
   const [open, setOpen] = useState(false);
@@ -162,6 +166,16 @@ function Dashboard() {
       picture:
         "https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg",
     };
+    {
+    }
+    //test
+
+    //test
+
+    {
+      enteredName == "" && callnotification("Nemanja", "nema ime", "warning");
+    }
+
     eidtMovie
       ? dispatch(editMovie(dataMovie))
       : dispatch(addNewMovie(dataMovie));
@@ -274,11 +288,28 @@ function Dashboard() {
       </div>
     </div>
   );
+  //Table option
   const options = {
     print: false,
     viewColumns: false,
     selectableRows: false,
   };
+  //Notification data
+  function callnotification(title, message, type) {
+    Store.addNotification({
+      title: title,
+      message: message,
+      type: type,
+      insert: "top",
+      container: "top-right",
+      animationIn: ["animate__animated", "animate__fadeIn"],
+      animationOut: ["animate__animated", "animate__fadeOut"],
+      dismiss: {
+        duration: 3000,
+        onScreen: true,
+      },
+    });
+  }
   return (
     <>
       <div className="open-dialog">
@@ -293,6 +324,14 @@ function Dashboard() {
       </div>
 
       <div className="wrapper-all">
+        <ReactNotifications rel="stylesheet" className="" />
+        <button
+          onClick={() => {
+            callnotification();
+          }}
+        >
+          calll notii
+        </button>
         <Dialog
           setOpen={setOpen}
           open={open}
