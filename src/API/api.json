@@ -1,82 +1,844 @@
 [
   {
-    "title": "Lindsay Snow",
-    "describe": "Consectetur culpa elit consectetur occaecat in excepteur ut laboris ex pariatur minim. Velit pariatur laborum qui ullamco est sit Lorem commodo deserunt non mollit veniam. Ipsum officia incididunt nulla ut nostrud laboris esse reprehenderit dolor aliqua dolore. Ullamco et occaecat minim irure pariatur esse.\r\n",
-    "date": "2021",
-    "type": "Comedy",
-    "rang": 2,
-    "isActive": false,
-    "id": 1,
-    "picture": "https://upload.wikimedia.org/wikipedia/sh/0/02/Spider-Man_2_Poster.jpg"
+    "datum_zaprimanja": "2018-06-06T12:53:38 -02:00",
+    "datum_stizanja_zzo": "2017-12-22T11:48:48 -01:00",
+    "dijagnoza": "ba45d7b5-e5a8-4013-82a6-284730c073fc",
+    "tip_povrede": "746 Anchorage Place, Riegelwood, Wisconsin, 6725",
+    "troskovi": [
+      {
+        "iznos_troska": "$3,172.78",
+        "datum_troska": "2014-03-27T02:04:08 -01:00",
+        "napomena": "ELECTONIC",
+        "uplate": [
+          {
+            "iznos_uplate": "$3,459.32",
+            "datum_uplate": "2022-02-09T10:29:19 -01:00",
+            "napomena": "WATERBABY"
+          },
+          
+          {
+            "iznos_uplate": "$1,579.60",
+            "datum_uplate": "2017-10-13T08:00:21 -02:00",
+            "napomena": "BUZZWORKS"
+          },
+          {
+            "iznos_uplate": "$1,634.82",
+            "datum_uplate": "2021-05-22T01:11:26 -02:00",
+            "napomena": "RETRACK"
+          },
+          
+          {
+            "iznos_uplate": "$2,939.16",
+            "datum_uplate": "2016-11-28T03:36:40 -01:00",
+            "napomena": "UNDERTAP"
+          },
+          {
+            "iznos_uplate": "$1,071.55",
+            "datum_uplate": "2019-10-30T08:30:20 -01:00",
+            "napomena": "ZILLAN"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$1,321.90",
+        "datum_troska": "2017-10-05T04:59:07 -02:00",
+        "napomena": "CINESANCT",
+        "uplate": [
+          {
+            "iznos_uplate": "$2,882.43",
+            "datum_uplate": "2017-07-30T02:16:58 -02:00",
+            "napomena": "EPLODE"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$1,559.08",
+        "datum_troska": "2018-06-14T09:17:43 -02:00",
+        "napomena": "PORTICO",
+        "uplate": [
+          {
+            "iznos_uplate": "$1,218.36",
+            "datum_uplate": "2015-09-11T10:34:31 -02:00",
+            "napomena": "DIGIPRINT"
+          },
+          {
+            "iznos_uplate": "$2,440.97",
+            "datum_uplate": "2019-08-17T05:06:17 -02:00",
+            "napomena": "GEEKETRON"
+          },
+          {
+            "iznos_uplate": "$3,363.84",
+            "datum_uplate": "2020-08-18T08:39:45 -02:00",
+            "napomena": "POLARAX"
+          },
+          {
+            "iznos_uplate": "$1,574.61",
+            "datum_uplate": "2018-05-06T05:33:46 -02:00",
+            "napomena": "UXMOX"
+          },
+          {
+            "iznos_uplate": "$2,070.32",
+            "datum_uplate": "2018-05-10T08:09:50 -02:00",
+            "napomena": "ZOUNDS"
+          },
+          {
+            "iznos_uplate": "$2,873.63",
+            "datum_uplate": "2015-04-20T06:35:14 -02:00",
+            "napomena": "GINKOGENE"
+          },
+          {
+            "iznos_uplate": "$3,865.21",
+            "datum_uplate": "2020-03-06T04:22:11 -01:00",
+            "napomena": "COREPAN"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$1,420.91",
+        "datum_troska": "2014-09-13T10:22:21 -02:00",
+        "napomena": "RECRITUBE",
+        "uplate": [
+          {
+            "iznos_uplate": "$3,095.84",
+            "datum_uplate": "2018-08-22T07:33:05 -02:00",
+            "napomena": "EQUITAX"
+          },
+          {
+            "iznos_uplate": "$1,359.60",
+            "datum_uplate": "2021-02-10T04:09:21 -01:00",
+            "napomena": "CORECOM"
+          },
+          {
+            "iznos_uplate": "$2,495.59",
+            "datum_uplate": "2020-05-07T08:55:45 -02:00",
+            "napomena": "XTH"
+          },
+          {
+            "iznos_uplate": "$2,638.17",
+            "datum_uplate": "2017-04-15T06:26:45 -02:00",
+            "napomena": "ZOINAGE"
+          },
+          {
+            "iznos_uplate": "$1,936.21",
+            "datum_uplate": "2014-07-10T11:49:26 -02:00",
+            "napomena": "ASIMILINE"
+          },
+          {
+            "iznos_uplate": "$3,060.48",
+            "datum_uplate": "2020-01-09T03:14:00 -01:00",
+            "napomena": "DOGSPA"
+          },
+          {
+            "iznos_uplate": "$2,473.09",
+            "datum_uplate": "2018-02-19T07:24:10 -01:00",
+            "napomena": "MALATHION"
+          }
+        ]
+      }
+    ]
   },
   {
-    "title": "Judy Salas",
-    "describe": "Deserunt sunt nisi exercitation occaecat voluptate reprehenderit aliqua enim excepteur laborum. Reprehenderit exercitation laboris esse labore pariatur nostrud. Ex laborum laboris ut non culpa eu tempor culpa eiusmod officia id irure sunt. Aliqua sunt est officia consectetur aute sit ipsum in laboris velit occaecat. Incididunt sint excepteur dolore nostrud est duis.\r\n",
-    "date": "2001",
-    "type": "Action",
-    "rang": 1,
-    "isActive": true,
-    "id": 2,
-    "picture": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    "datum_zaprimanja": "2017-02-20T06:16:29 -01:00",
+    "datum_stizanja_zzo": "2022-01-11T12:59:06 -01:00",
+    "dijagnoza": "4a4614e6-8d81-44bf-a7f4-e7cd22be773f",
+    "tip_povrede": "512 Cozine Avenue, Veguita, New York, 9311",
+    "troskovi": [
+      {
+        "iznos_troska": "$3,457.27",
+        "datum_troska": "2018-07-03T09:37:26 -02:00",
+        "napomena": "PIGZART",
+        "uplate": [
+          {
+            "iznos_uplate": "$2,776.36",
+            "datum_uplate": "2019-05-26T06:43:02 -02:00",
+            "napomena": "ISOSPHERE"
+          },
+          {
+            "iznos_uplate": "$1,957.95",
+            "datum_uplate": "2015-05-05T02:59:53 -02:00",
+            "napomena": "ISOLOGIA"
+          },
+          {
+            "iznos_uplate": "$1,099.92",
+            "datum_uplate": "2014-11-04T09:43:39 -01:00",
+            "napomena": "VISALIA"
+          },
+          {
+            "iznos_uplate": "$3,186.44",
+            "datum_uplate": "2021-03-01T11:20:05 -01:00",
+            "napomena": "SCENTRIC"
+          },
+          {
+            "iznos_uplate": "$1,957.15",
+            "datum_uplate": "2020-02-02T06:02:21 -01:00",
+            "napomena": "ORGANICA"
+          },
+          {
+            "iznos_uplate": "$3,055.83",
+            "datum_uplate": "2014-01-15T11:21:26 -01:00",
+            "napomena": "KINDALOO"
+          },
+          {
+            "iznos_uplate": "$3,918.22",
+            "datum_uplate": "2014-05-20T12:12:40 -02:00",
+            "napomena": "BEZAL"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$3,414.42",
+        "datum_troska": "2020-08-30T03:52:29 -02:00",
+        "napomena": "KYAGURU",
+        "uplate": [
+          {
+            "iznos_uplate": "$2,252.55",
+            "datum_uplate": "2019-06-21T01:31:51 -02:00",
+            "napomena": "FIBRODYNE"
+          },
+          {
+            "iznos_uplate": "$2,495.48",
+            "datum_uplate": "2017-07-27T07:09:55 -02:00",
+            "napomena": "ZILLIDIUM"
+          },
+          {
+            "iznos_uplate": "$2,902.91",
+            "datum_uplate": "2021-11-05T08:22:16 -01:00",
+            "napomena": "FROLIX"
+          },
+          {
+            "iznos_uplate": "$2,517.68",
+            "datum_uplate": "2021-01-20T11:50:13 -01:00",
+            "napomena": "CYTREK"
+          },
+          {
+            "iznos_uplate": "$2,212.51",
+            "datum_uplate": "2017-09-14T04:44:15 -02:00",
+            "napomena": "ANOCHA"
+          },
+          {
+            "iznos_uplate": "$2,354.02",
+            "datum_uplate": "2018-11-28T06:33:21 -01:00",
+            "napomena": "ZILIDIUM"
+          },
+          {
+            "iznos_uplate": "$3,983.15",
+            "datum_uplate": "2019-05-26T03:10:07 -02:00",
+            "napomena": "REPETWIRE"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$3,282.31",
+        "datum_troska": "2020-10-06T05:05:00 -02:00",
+        "napomena": "FREAKIN",
+        "uplate": [
+          {
+            "iznos_uplate": "$2,790.78",
+            "datum_uplate": "2020-11-18T08:14:54 -01:00",
+            "napomena": "ZILLACTIC"
+          },
+          {
+            "iznos_uplate": "$3,116.67",
+            "datum_uplate": "2021-07-16T03:53:07 -02:00",
+            "napomena": "ISOLOGICS"
+          },
+          {
+            "iznos_uplate": "$3,774.80",
+            "datum_uplate": "2017-03-09T01:50:48 -01:00",
+            "napomena": "SECURIA"
+          },
+          {
+            "iznos_uplate": "$1,278.97",
+            "datum_uplate": "2022-03-15T04:15:11 -01:00",
+            "napomena": "VIRVA"
+          },
+          {
+            "iznos_uplate": "$3,890.17",
+            "datum_uplate": "2016-03-29T06:08:23 -02:00",
+            "napomena": "UPLINX"
+          },
+          {
+            "iznos_uplate": "$3,246.34",
+            "datum_uplate": "2017-05-01T03:47:11 -02:00",
+            "napomena": "PHARMACON"
+          },
+          {
+            "iznos_uplate": "$2,473.32",
+            "datum_uplate": "2016-07-18T01:43:10 -02:00",
+            "napomena": "XELEGYL"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$2,636.88",
+        "datum_troska": "2017-01-28T05:46:59 -01:00",
+        "napomena": "VIXO",
+        "uplate": [
+          {
+            "iznos_uplate": "$3,909.22",
+            "datum_uplate": "2020-03-07T09:29:19 -01:00",
+            "napomena": "MARKETOID"
+          },
+          {
+            "iznos_uplate": "$1,858.42",
+            "datum_uplate": "2017-08-04T03:13:57 -02:00",
+            "napomena": "GLEAMINK"
+          },
+          {
+            "iznos_uplate": "$1,682.11",
+            "datum_uplate": "2021-10-26T10:41:37 -02:00",
+            "napomena": "EXOSWITCH"
+          },
+          {
+            "iznos_uplate": "$2,895.29",
+            "datum_uplate": "2022-01-04T12:55:42 -01:00",
+            "napomena": "ECSTASIA"
+          },
+          {
+            "iznos_uplate": "$1,347.85",
+            "datum_uplate": "2016-06-08T12:28:58 -02:00",
+            "napomena": "ENERVATE"
+          },
+          {
+            "iznos_uplate": "$2,762.05",
+            "datum_uplate": "2015-08-03T03:33:30 -02:00",
+            "napomena": "OTHERWAY"
+          },
+          {
+            "iznos_uplate": "$2,539.42",
+            "datum_uplate": "2022-04-24T08:38:03 -02:00",
+            "napomena": "MEDIOT"
+          }
+        ]
+      }
+    ]
   },
   {
-    "title": "Leigh Ingram",
-    "describe": "Exercitation id sit quis laboris. Minim labore irure proident do in sint Lorem mollit ad occaecat. Veniam voluptate incididunt velit ullamco amet veniam. Officia occaecat incididunt mollit labore quis. Ex non excepteur non laborum id magna quis officia cupidatat reprehenderit et mollit. Non ex aliqua Lorem nulla dolor.\r\n",
-    "date": "1995",
-    "type": "Horror",
-    "rang": 1,
-
-    "isActive": false,
-    "id": 3,
-    "picture": "https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    "datum_zaprimanja": "2014-05-13T08:49:49 -02:00",
+    "datum_stizanja_zzo": "2019-06-30T02:10:44 -02:00",
+    "dijagnoza": "8ff3918f-056b-4591-8256-b3ef7c29f150",
+    "tip_povrede": "887 Seeley Street, Fairfield, Maine, 2654",
+    "troskovi": [
+      {
+        "iznos_troska": "$1,456.28",
+        "datum_troska": "2016-09-28T04:41:40 -02:00",
+        "napomena": "POLARIUM",
+        "uplate": [
+          {
+            "iznos_uplate": "$3,510.00",
+            "datum_uplate": "2019-07-04T05:56:53 -02:00",
+            "napomena": "SIGNIDYNE"
+          },
+          {
+            "iznos_uplate": "$2,884.37",
+            "datum_uplate": "2017-08-21T01:07:18 -02:00",
+            "napomena": "NIPAZ"
+          },
+          {
+            "iznos_uplate": "$3,798.75",
+            "datum_uplate": "2019-06-03T09:40:02 -02:00",
+            "napomena": "OPTIQUE"
+          },
+          {
+            "iznos_uplate": "$1,442.97",
+            "datum_uplate": "2018-07-04T04:57:44 -02:00",
+            "napomena": "QUANTALIA"
+          },
+          {
+            "iznos_uplate": "$3,519.15",
+            "datum_uplate": "2014-05-06T03:35:25 -02:00",
+            "napomena": "HIVEDOM"
+          },
+          {
+            "iznos_uplate": "$2,590.52",
+            "datum_uplate": "2016-01-15T12:05:36 -01:00",
+            "napomena": "MOLTONIC"
+          },
+          {
+            "iznos_uplate": "$3,945.07",
+            "datum_uplate": "2019-05-20T05:56:49 -02:00",
+            "napomena": "SYNKGEN"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$1,420.16",
+        "datum_troska": "2021-07-09T11:22:29 -02:00",
+        "napomena": "YOGASM",
+        "uplate": [
+          {
+            "iznos_uplate": "$1,956.36",
+            "datum_uplate": "2018-11-24T05:06:33 -01:00",
+            "napomena": "OZEAN"
+          },
+          {
+            "iznos_uplate": "$3,624.35",
+            "datum_uplate": "2017-09-11T09:41:21 -02:00",
+            "napomena": "PROGENEX"
+          },
+          {
+            "iznos_uplate": "$2,712.32",
+            "datum_uplate": "2020-01-24T08:21:51 -01:00",
+            "napomena": "BOSTONIC"
+          },
+          {
+            "iznos_uplate": "$2,710.60",
+            "datum_uplate": "2021-05-15T03:18:21 -02:00",
+            "napomena": "GRUPOLI"
+          },
+          {
+            "iznos_uplate": "$2,194.16",
+            "datum_uplate": "2019-08-07T07:51:10 -02:00",
+            "napomena": "GENESYNK"
+          },
+          {
+            "iznos_uplate": "$1,193.34",
+            "datum_uplate": "2014-04-25T02:45:15 -02:00",
+            "napomena": "LUMBREX"
+          },
+          {
+            "iznos_uplate": "$1,944.98",
+            "datum_uplate": "2021-05-13T12:23:16 -02:00",
+            "napomena": "BEADZZA"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$1,947.33",
+        "datum_troska": "2016-08-30T10:58:06 -02:00",
+        "napomena": "GOLOGY",
+        "uplate": [
+          {
+            "iznos_uplate": "$3,176.06",
+            "datum_uplate": "2014-03-03T06:54:21 -01:00",
+            "napomena": "BIOLIVE"
+          },
+          {
+            "iznos_uplate": "$1,789.58",
+            "datum_uplate": "2022-03-08T03:48:44 -01:00",
+            "napomena": "ZAYA"
+          },
+          {
+            "iznos_uplate": "$2,675.15",
+            "datum_uplate": "2016-05-08T06:08:22 -02:00",
+            "napomena": "LINGOAGE"
+          },
+          {
+            "iznos_uplate": "$1,850.83",
+            "datum_uplate": "2015-01-14T12:08:53 -01:00",
+            "napomena": "CONFERIA"
+          },
+          {
+            "iznos_uplate": "$1,707.10",
+            "datum_uplate": "2021-07-14T01:56:43 -02:00",
+            "napomena": "DREAMIA"
+          },
+          {
+            "iznos_uplate": "$2,018.54",
+            "datum_uplate": "2021-01-10T01:59:25 -01:00",
+            "napomena": "EXOSTREAM"
+          },
+          {
+            "iznos_uplate": "$2,832.44",
+            "datum_uplate": "2020-03-22T09:50:12 -01:00",
+            "napomena": "JIMBIES"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$3,880.69",
+        "datum_troska": "2021-10-04T09:17:58 -02:00",
+        "napomena": "CODACT",
+        "uplate": [
+          {
+            "iznos_uplate": "$1,627.95",
+            "datum_uplate": "2020-10-26T05:34:20 -01:00",
+            "napomena": "COLAIRE"
+          },
+          {
+            "iznos_uplate": "$2,287.13",
+            "datum_uplate": "2021-08-25T03:44:05 -02:00",
+            "napomena": "ENJOLA"
+          },
+          {
+            "iznos_uplate": "$3,638.79",
+            "datum_uplate": "2015-07-07T08:36:29 -02:00",
+            "napomena": "TALKOLA"
+          },
+          {
+            "iznos_uplate": "$2,699.71",
+            "datum_uplate": "2015-12-23T08:21:23 -01:00",
+            "napomena": "MULTIFLEX"
+          },
+          {
+            "iznos_uplate": "$2,006.40",
+            "datum_uplate": "2016-12-03T07:31:42 -01:00",
+            "napomena": "APPLICA"
+          },
+          {
+            "iznos_uplate": "$1,364.39",
+            "datum_uplate": "2016-06-15T01:48:26 -02:00",
+            "napomena": "ASSITIA"
+          },
+          {
+            "iznos_uplate": "$2,603.07",
+            "datum_uplate": "2015-02-19T04:52:18 -01:00",
+            "napomena": "ANIMALIA"
+          }
+        ]
+      }
+    ]
   },
   {
-    "title": "Gutierrez Herrera",
-    "describe": "Tempor velit velit quis occaecat ea labore sit ad velit. Et amet tempor Lorem ad sunt pariatur reprehenderit sunt. Proident anim exercitation eu culpa.\r\n",
-    "date": "2010",
-    "type": "Action",
-    "rang": 2,
-    "isActive": false,
-    "id": 4,
-    "picture": "https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    "datum_zaprimanja": "2020-04-19T03:13:31 -02:00",
+    "datum_stizanja_zzo": "2015-02-24T06:15:06 -01:00",
+    "dijagnoza": "94bc3a21-c380-46b3-82e7-004d8d5d821d",
+    "tip_povrede": "250 Bergen Court, Osage, Kansas, 1048",
+    "troskovi": [
+      {
+        "iznos_troska": "$1,073.44",
+        "datum_troska": "2014-04-24T02:58:35 -02:00",
+        "napomena": "XUMONK",
+        "uplate": [
+          {
+            "iznos_uplate": "$3,697.90",
+            "datum_uplate": "2017-12-10T04:30:19 -01:00",
+            "napomena": "SQUISH"
+          },
+          {
+            "iznos_uplate": "$2,736.82",
+            "datum_uplate": "2019-05-30T02:56:46 -02:00",
+            "napomena": "SCHOOLIO"
+          },
+          {
+            "iznos_uplate": "$1,929.91",
+            "datum_uplate": "2015-02-07T11:03:30 -01:00",
+            "napomena": "CANOPOLY"
+          },
+          {
+            "iznos_uplate": "$3,400.69",
+            "datum_uplate": "2017-08-08T09:54:05 -02:00",
+            "napomena": "STEELTAB"
+          },
+          {
+            "iznos_uplate": "$3,195.31",
+            "datum_uplate": "2019-05-07T04:13:43 -02:00",
+            "napomena": "FURNIGEER"
+          },
+          {
+            "iznos_uplate": "$3,240.67",
+            "datum_uplate": "2021-09-13T09:07:02 -02:00",
+            "napomena": "VERAQ"
+          },
+          {
+            "iznos_uplate": "$1,132.67",
+            "datum_uplate": "2021-08-27T11:56:19 -02:00",
+            "napomena": "QUANTASIS"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$2,730.35",
+        "datum_troska": "2019-02-20T12:21:36 -01:00",
+        "napomena": "MIRACLIS",
+        "uplate": [
+          {
+            "iznos_uplate": "$3,819.97",
+            "datum_uplate": "2020-07-01T09:11:07 -02:00",
+            "napomena": "ARTWORLDS"
+          },
+          {
+            "iznos_uplate": "$1,361.09",
+            "datum_uplate": "2014-12-06T11:30:14 -01:00",
+            "napomena": "VIDTO"
+          },
+          {
+            "iznos_uplate": "$1,232.97",
+            "datum_uplate": "2020-09-19T11:52:33 -02:00",
+            "napomena": "PROTODYNE"
+          },
+          {
+            "iznos_uplate": "$2,494.17",
+            "datum_uplate": "2014-05-06T10:00:57 -02:00",
+            "napomena": "ESSENSIA"
+          },
+          {
+            "iznos_uplate": "$3,520.13",
+            "datum_uplate": "2021-04-27T09:10:36 -02:00",
+            "napomena": "GENMOM"
+          },
+          {
+            "iznos_uplate": "$2,338.52",
+            "datum_uplate": "2016-04-13T10:59:33 -02:00",
+            "napomena": "GEEKMOSIS"
+          },
+          {
+            "iznos_uplate": "$3,396.80",
+            "datum_uplate": "2019-04-14T04:54:03 -02:00",
+            "napomena": "SOFTMICRO"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$3,114.73",
+        "datum_troska": "2017-08-16T10:49:06 -02:00",
+        "napomena": "GAZAK",
+        "uplate": [
+          {
+            "iznos_uplate": "$1,336.65",
+            "datum_uplate": "2014-12-29T05:24:52 -01:00",
+            "napomena": "BEDLAM"
+          },
+          {
+            "iznos_uplate": "$3,555.82",
+            "datum_uplate": "2022-05-08T01:14:34 -02:00",
+            "napomena": "PETICULAR"
+          },
+          {
+            "iznos_uplate": "$2,246.72",
+            "datum_uplate": "2021-10-29T02:14:16 -02:00",
+            "napomena": "EDECINE"
+          },
+          {
+            "iznos_uplate": "$3,300.21",
+            "datum_uplate": "2018-11-21T05:55:49 -01:00",
+            "napomena": "NEBULEAN"
+          },
+          {
+            "iznos_uplate": "$1,442.75",
+            "datum_uplate": "2018-09-01T12:31:12 -02:00",
+            "napomena": "QUAREX"
+          },
+          {
+            "iznos_uplate": "$1,346.01",
+            "datum_uplate": "2020-06-19T10:10:10 -02:00",
+            "napomena": "KANGLE"
+          },
+          {
+            "iznos_uplate": "$1,516.16",
+            "datum_uplate": "2018-05-28T11:16:27 -02:00",
+            "napomena": "BALUBA"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$1,728.27",
+        "datum_troska": "2021-05-18T05:40:38 -02:00",
+        "napomena": "ZEDALIS",
+        "uplate": [
+          {
+            "iznos_uplate": "$3,638.39",
+            "datum_uplate": "2021-05-23T10:34:00 -02:00",
+            "napomena": "NEWCUBE"
+          },
+          {
+            "iznos_uplate": "$2,537.18",
+            "datum_uplate": "2016-07-02T11:46:42 -02:00",
+            "napomena": "RUBADUB"
+          },
+          {
+            "iznos_uplate": "$2,895.65",
+            "datum_uplate": "2014-08-01T09:23:56 -02:00",
+            "napomena": "QIAO"
+          },
+          {
+            "iznos_uplate": "$2,894.50",
+            "datum_uplate": "2018-10-14T09:41:32 -02:00",
+            "napomena": "SPEEDBOLT"
+          },
+          {
+            "iznos_uplate": "$2,360.22",
+            "datum_uplate": "2020-11-19T01:31:32 -01:00",
+            "napomena": "AVENETRO"
+          },
+          {
+            "iznos_uplate": "$1,162.64",
+            "datum_uplate": "2018-04-26T09:24:18 -02:00",
+            "napomena": "ENOMEN"
+          },
+          {
+            "iznos_uplate": "$3,683.01",
+            "datum_uplate": "2018-10-30T07:30:44 -01:00",
+            "napomena": "SENMAO"
+          }
+        ]
+      }
+    ]
   },
   {
-    "title": "Alexander Macdonald",
-    "describe": "Proident veniam non dolore magna veniam officia pariatur. Nisi quis elit consectetur eu id adipisicing incididunt nulla. Non labore commodo aliquip quis voluptate. Eu fugiat enim fugiat ipsum anim sint laboris nulla.\r\n",
-    "date": "2015",
-    "type": "Comedy",
-    "rang": 2,
-    "isActive": false,
-    "id": 5,
-    "picture": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80"
-  },
-  {
-    "title": "Dolores Bean",
-    "describe": "Et et minim ex sit quis nostrud sint deserunt sit sit dolor laboris consectetur enim. Proident occaecat ea elit aute. Consequat ut quis aliquip exercitation anim ullamco. Eu Lorem et nisi culpa velit. Veniam aute fugiat aliquip sunt proident tempor. Consequat commodo cillum adipisicing ut.\r\n",
-    "date": "2020",
-    "type": "Action",
-    "rang": 3,
-    "isActive": true,
-    "id": 6,
-    "picture": "https://images.unsplash.com/photo-1494995971821-13e351803d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-  },
-  {
-    "title": "Kelly Beck",
-    "describe": "Id tempor ex pariatur sunt cillum cupidatat consectetur. Cillum pariatur non exercitation deserunt pariatur anim laboris duis sint elit id cillum. Dolor cupidatat tempor nulla dolor nisi. Sunt adipisicing duis nulla reprehenderit voluptate dolor est. Consequat minim consectetur duis minim labore consectetur elit occaecat do cillum pariatur magna esse. Cupidatat voluptate veniam culpa duis deserunt sit.\r\n",
-    "date": "2014",
-    "type": "Horror",
-    "rang": 5,
-    "isActive": true,
-    "id": 7,
-    "picture": "https://images.unsplash.com/photo-1462926703708-44ab9e271d97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
-  },
-  {
-    "title": "Jeanne Strong",
-    "describe": "Est eu voluptate fugiat elit aute mollit commodo incididunt cupidatat incididunt exercitation fugiat cupidatat ea. Voluptate laborum ea aliqua id. Id incididunt incididunt labore commodo reprehenderit culpa laborum. Nisi aute nulla incididunt laborum adipisicing commodo nulla. Incididunt fugiat Lorem eu in nulla exercitation nisi occaecat exercitation nostrud laborum duis sit.\r\n",
-    "date": "1998",
-    "type": "Horror",
-    "rang": 3,
-    "id": 8,
-    "picture": "https://images.unsplash.com/photo-1462926703708-44ab9e271d97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+    "datum_zaprimanja": "2022-01-04T06:51:22 -01:00",
+    "datum_stizanja_zzo": "2015-11-07T10:05:26 -01:00",
+    "dijagnoza": "524c395d-5a17-49b4-aa56-1c332572ecbd",
+    "tip_povrede": "807 Forrest Street, Orason, Nebraska, 1050",
+    "troskovi": [
+      {
+        "iznos_troska": "$1,360.16",
+        "datum_troska": "2016-07-01T06:23:05 -02:00",
+        "napomena": "CINCYR",
+        "uplate": [
+          {
+            "iznos_uplate": "$2,819.65",
+            "datum_uplate": "2016-10-17T11:19:47 -02:00",
+            "napomena": "SPRINGBEE"
+          },
+          {
+            "iznos_uplate": "$3,777.32",
+            "datum_uplate": "2018-06-09T11:07:11 -02:00",
+            "napomena": "SATIANCE"
+          },
+          {
+            "iznos_uplate": "$1,953.92",
+            "datum_uplate": "2017-10-19T01:52:48 -02:00",
+            "napomena": "POOCHIES"
+          },
+          {
+            "iznos_uplate": "$2,579.15",
+            "datum_uplate": "2016-12-24T02:07:51 -01:00",
+            "napomena": "RAMJOB"
+          },
+          {
+            "iznos_uplate": "$3,358.71",
+            "datum_uplate": "2019-08-16T07:18:13 -02:00",
+            "napomena": "ARCTIQ"
+          },
+          {
+            "iznos_uplate": "$3,502.86",
+            "datum_uplate": "2018-07-26T10:57:48 -02:00",
+            "napomena": "DAISU"
+          },
+          {
+            "iznos_uplate": "$2,564.09",
+            "datum_uplate": "2019-02-16T10:07:14 -01:00",
+            "napomena": "MEDCOM"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$3,719.36",
+        "datum_troska": "2017-07-19T05:28:12 -02:00",
+        "napomena": "GEEKOSIS",
+        "uplate": [
+          {
+            "iznos_uplate": "$1,315.73",
+            "datum_uplate": "2020-06-08T02:25:10 -02:00",
+            "napomena": "PAWNAGRA"
+          },
+          {
+            "iznos_uplate": "$3,123.22",
+            "datum_uplate": "2022-04-05T09:46:41 -02:00",
+            "napomena": "BLANET"
+          },
+          {
+            "iznos_uplate": "$1,269.11",
+            "datum_uplate": "2019-03-22T12:59:37 -01:00",
+            "napomena": "ACCRUEX"
+          },
+          {
+            "iznos_uplate": "$2,476.96",
+            "datum_uplate": "2022-05-01T11:22:03 -02:00",
+            "napomena": "COMVOY"
+          },
+          {
+            "iznos_uplate": "$2,748.27",
+            "datum_uplate": "2016-08-09T10:18:08 -02:00",
+            "napomena": "FUTURITY"
+          },
+          {
+            "iznos_uplate": "$1,290.90",
+            "datum_uplate": "2020-05-02T05:49:39 -02:00",
+            "napomena": "CENTREXIN"
+          },
+          {
+            "iznos_uplate": "$2,753.47",
+            "datum_uplate": "2015-06-19T07:39:13 -02:00",
+            "napomena": "PRIMORDIA"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$3,463.96",
+        "datum_troska": "2018-08-31T04:20:02 -02:00",
+        "napomena": "OLUCORE",
+        "uplate": [
+          {
+            "iznos_uplate": "$1,023.88",
+            "datum_uplate": "2016-11-24T09:30:56 -01:00",
+            "napomena": "COMDOM"
+          },
+          {
+            "iznos_uplate": "$2,746.16",
+            "datum_uplate": "2015-10-22T12:11:13 -02:00",
+            "napomena": "ENDIPINE"
+          },
+          {
+            "iznos_uplate": "$2,172.60",
+            "datum_uplate": "2014-08-12T10:47:40 -02:00",
+            "napomena": "XIIX"
+          },
+          {
+            "iznos_uplate": "$2,802.35",
+            "datum_uplate": "2016-11-25T07:27:04 -01:00",
+            "napomena": "SLAX"
+          },
+          {
+            "iznos_uplate": "$2,357.65",
+            "datum_uplate": "2016-09-12T08:18:31 -02:00",
+            "napomena": "ELEMANTRA"
+          },
+          {
+            "iznos_uplate": "$1,201.40",
+            "datum_uplate": "2014-01-27T01:42:35 -01:00",
+            "napomena": "XOGGLE"
+          },
+          {
+            "iznos_uplate": "$3,748.20",
+            "datum_uplate": "2020-07-21T05:34:47 -02:00",
+            "napomena": "CODAX"
+          }
+        ]
+      },
+      {
+        "iznos_troska": "$1,672.71",
+        "datum_troska": "2019-11-23T07:43:45 -01:00",
+        "napomena": "SLOFAST",
+        "uplate": [
+          {
+            "iznos_uplate": "$3,677.69",
+            "datum_uplate": "2022-04-30T08:30:29 -02:00",
+            "napomena": "EXTRO"
+          },
+          {
+            "iznos_uplate": "$3,963.76",
+            "datum_uplate": "2020-03-11T12:17:22 -01:00",
+            "napomena": "BYTREX"
+          },
+          {
+            "iznos_uplate": "$2,360.61",
+            "datum_uplate": "2019-10-22T06:10:37 -02:00",
+            "napomena": "PHUEL"
+          },
+          {
+            "iznos_uplate": "$2,910.26",
+            "datum_uplate": "2021-10-07T12:31:09 -02:00",
+            "napomena": "FLEETMIX"
+          },
+          {
+            "iznos_uplate": "$3,401.81",
+            "datum_uplate": "2015-08-22T08:39:16 -02:00",
+            "napomena": "GEEKOL"
+          },
+          {
+            "iznos_uplate": "$3,895.67",
+            "datum_uplate": "2019-03-27T03:31:31 -01:00",
+            "napomena": "AQUAFIRE"
+          },
+          {
+            "iznos_uplate": "$2,464.12",
+            "datum_uplate": "2021-08-10T10:46:15 -02:00",
+            "napomena": "TURNABOUT"
+          }
+        ]
+      }
+    ]
   }
 ]

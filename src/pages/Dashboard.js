@@ -34,6 +34,7 @@ function Dashboard() {
   const [addNewOrEdit, setAddNewOrEdit] = useState("");
   const [enteredName, setEnteredlName] = useState("");
   const [enteredDescription, setEnteredDescription] = useState("");
+  const [proba, setProba] = useState(0);
   const [enteredCategory, setEnteredCategory] = useState(
     eidtMovie ? eidtMovie?.type : ""
   );
@@ -59,32 +60,97 @@ function Dashboard() {
 
   const columns = [
     {
-      name: "title",
-      label: "Name",
+      name: "datum_zaprimanja",
+      label: "Datum zaprimanja",
       options: {
         filter: true,
         sort: true,
       },
     },
     {
-      name: "describe",
-      label: "Describe",
+      name: "datum_stizanja_zzo",
+      label: "Datum stizanja",
       options: {
         filter: true,
         sort: true,
       },
     },
     {
-      name: "date",
-      label: "Year of presentation",
+      name: "dijagnoza",
+      label: "Dijagnoza",
       options: {
         filter: true,
         sort: true,
       },
     },
     {
-      name: "type",
-      label: "Category",
+      name: "tip_povrede",
+      label: "Tip potvrde",
+      options: {
+        filter: true,
+        sort: true,
+      },
+    },
+
+
+
+
+
+    {
+      name: "Actions",
+      label: "",
+      property: "id",
+      options: {
+        filter: false,
+        sort: false,
+        empty: true,
+        customBodyRenderLite: (dataIndex) => {
+          return (
+            <>
+              {movies[dataIndex]?.isActive ? (
+                <FontAwesomeIcon
+                  className="row-edit-table"
+                  icon={faEdit}
+                  onClick={() => {
+                    setAddNewOrEdit("Edit movie");
+                    dispatch(getEditMovie(movies[dataIndex]?.id));
+                    setOpen(true);
+                  }}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faEdit}
+                  onClick={() => {
+                    console.log("This movie is not available");
+                  }}
+                />
+              )}
+            </>
+          );
+        },
+      },
+    },
+  ];
+  const columns2 = [
+    {
+      name: "iznos_troska",
+      label: "Iznos troška",
+      options: {
+        filter: true,
+        sort: true,
+      },
+    },
+    {
+      name: "datum_troska",
+      label: "Datum",
+      options: {
+        filter: true,
+        sort: true,
+      },
+    },
+    {
+      name: "napomena",
+      label: "Napomena",
       options: {
         filter: true,
         sort: true,
@@ -92,30 +158,63 @@ function Dashboard() {
     },
 
     {
-      name: "rang",
-      label: "Rang",
+      name: "Actions",
+      label: "",
+      property: "id",
+      options: {
+        filter: false,
+        sort: false,
+        empty: true,
+        customBodyRenderLite: (dataIndex) => {
+          return (
+            <>
+              {movies[dataIndex]?.isActive ? (
+                <FontAwesomeIcon
+                  className="row-edit-table"
+                  icon={faEdit}
+                  onClick={() => {
+                    setAddNewOrEdit("Edit movie");
+                    dispatch(getEditMovie(movies[dataIndex]?.id));
+                    setOpen(true);
+                  }}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faEdit}
+                  onClick={() => {
+                    console.log("This movie is not available");
+                  }}
+                />
+              )}
+            </>
+          );
+        },
+      },
+    },
+  ];
+  const columns3 = [
+    {
+      name: "iznos_uplate",
+      label: "Iznos uplate",
       options: {
         filter: true,
         sort: true,
       },
     },
     {
-      name: "isActive",
-      label: "Active",
+      name: "datum_uplate",
+      label: "Datum uplate",
       options: {
         filter: true,
-        sort: false,
-        customBodyRenderLite: (dataIndex) => {
-          return (
-            <>
-              {movies[dataIndex].isActive ? (
-                <FontAwesomeIcon icon={faCheck} color="green" />
-              ) : (
-                <FontAwesomeIcon icon={faTimes} color="red" />
-              )}
-            </>
-          );
-        },
+        sort: true,
+      },
+    },
+    {
+      name: "napomena",
+      label: "Napomena",
+      options: {
+        filter: true,
+        sort: true,
       },
     },
 
@@ -288,12 +387,55 @@ function Dashboard() {
       </div>
     </div>
   );
+  const options2 = {
+    print: false,
+    viewColumns: false,
+    selectableRows: false,
+    expandableRows: true,
+    renderExpandableRow: (rowData, rowMeta) => {
+
+      const colSpan = rowData.length + 1;
+      console.log(colSpan, "colSpan")
+      console.log(rowData, "rowData")
+      console.log(rowMeta.rowIndex, "rowMeta")
+      console.log(movies[rowMeta.rowIndex]?.troskovi[rowMeta.rowIndex]?.uplate, "dataTable 0 ostvarebi uplate be")
+      //dataTable[rowMeta.rowIndex]?.ostvareni_troškovi
+      return (
+        <MUIDataTable
+          title={"30 Most Popular Movies"}
+          data={movies[rowMeta.rowIndex]?.troskovi[rowMeta.rowIndex]?.uplate}
+          columns={columns3}
+          className="movie-data-table-wrapper"
+          options={options}
+        />
+      )
+    },
+    expandableRowsHeader: false
+  };
   //Table option
   const options = {
     print: false,
     viewColumns: false,
     selectableRows: false,
+    expandableRows: true,
+    renderExpandableRow: (rowData, rowMeta) => {
+
+      const colSpan = rowData.length + 1;
+      const rowMetaa = rowMeta;
+
+      return (
+        <MUIDataTable
+          title={"30 Most Popular Movies"}
+          data={movies[rowMeta.rowIndex]?.troskovi}
+          columns={columns2}
+          className="movie-data-table-wrapper"
+          options={options2}
+        />
+      )
+    },
+    expandableRowsHeader: false
   };
+
   //Notification data
   function callnotification(title, message, type) {
     Store.addNotification({
