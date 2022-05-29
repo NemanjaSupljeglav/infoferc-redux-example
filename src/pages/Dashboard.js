@@ -402,7 +402,7 @@ function Dashboard() {
       //dataTable[rowMeta.rowIndex]?.ostvareni_troškovi
       return (
         <MUIDataTable
-          title={"30 Most Popular Movies"}
+          title={"Uplate"}
           data={movies[rowMeta.rowIndex]?.troskovi[rowMeta.rowIndex]?.uplate}
           columns={columns3}
           className="movie-data-table-wrapper"
@@ -422,10 +422,10 @@ function Dashboard() {
 
       const colSpan = rowData.length + 1;
       const rowMetaa = rowMeta;
-
+      dispatch(getMovies(2));
       return (
         <MUIDataTable
-          title={"30 Most Popular Movies"}
+          title={"Troškovi"}
           data={movies[rowMeta.rowIndex]?.troskovi}
           columns={columns2}
           className="movie-data-table-wrapper"
@@ -488,7 +488,7 @@ function Dashboard() {
         </div>
         <ThemeProvider theme={createTheme()}>
           <MUIDataTable
-            title={"30 Most Popular Movies"}
+            title={"Ozljede na radu"}
             data={movies}
             columns={columns}
             className="movie-data-table-wrapper"
